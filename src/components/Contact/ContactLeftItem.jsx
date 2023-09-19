@@ -1,4 +1,4 @@
-import React from "react";
+
 import { AiOutlineMail } from "react-icons/ai";
 import {
   FaShareAlt,
@@ -9,8 +9,8 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import Link from "next/link";
+import Image from "next/image";
 const ContactLeftItem = () => {
   return (
     <>
@@ -38,22 +38,22 @@ const ContactLeftItem = () => {
               <div className="social-item-content">
                 <h5>Follow Us</h5>
                 <div className="social-contact-list d-flex align-items-center gap-3">
-                  <a href="https://twitter.com/eas_nft" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://twitter.com/eas_nft" target="_blank" rel="noopener noreferrer">
                     <FaTwitter />
-                  </a>
-                  <a href="https://www.facebook.com/easNFT/" target="_blank" rel="noopener noreferrer">
+                  </Link>
+                  <Link href="https://www.facebook.com/easNFT/" target="_blank" rel="noopener noreferrer">
                     <FaFacebookF />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Feasnft%2Fabout%2F"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaLinkedinIn />
-                  </a>
-                  <a href="https://www.instagram.com/eas_nft/" target="_blank" rel="noopener noreferrer">
+                  </Link>
+                  <Link href="https://www.instagram.com/eas_nft/" target="_blank" rel="noopener noreferrer">
                     <FaInstagram />
-                  </a>{" "}
+                  </Link>{" "}
                 </div>
               </div>
             </div>
@@ -84,8 +84,8 @@ const ContactLeftItem = () => {
         </div>
       </div>
       <div className="opensea-img-item d-flex justify-content-center mt-4">
-         <Link to={'https://opensea.io/collection/ethereum-address-service'} target="_blank" className="opensea-imgs">
-            <LazyLoadImage src="/images/contact/opensea.webp" />
+         <Link href={'https://opensea.io/collection/ethereum-address-service'} target="_blank" className="opensea-imgs">
+            <Image width={302} height={107} src="/images/contact/opensea.webp" />
            </Link>
          </div>
     </>

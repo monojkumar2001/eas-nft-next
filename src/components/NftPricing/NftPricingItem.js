@@ -1,12 +1,13 @@
+'use client';
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-const NftPricingItem = ({ price, description }) => {
+const NftPricingItem = () => {
   return (
     <>
       <div className="nft-pricing-content-items">
         <div className="nft-pricing-item">
-          <Link to={""}>Standard Address NFTs</Link>
+          <Link href={""}>Standard Address NFTs</Link>
         </div>
         <div className="nft-pricing-item">
           <span> 0.02 ETH</span>
@@ -28,7 +29,7 @@ const NftPricingItem = ({ price, description }) => {
       </div>
       <div className="nft-pricing-content-items">
         <div className="nft-pricing-item">
-          <Link to={""}>EAS Gold Collection</Link>
+          <Link href={""}>EAS Gold Collection</Link>
         </div>
         <div className="nft-pricing-item">
           <span>0.05 ETH</span>
@@ -44,7 +45,7 @@ const NftPricingItem = ({ price, description }) => {
       </div>
       <div className="nft-pricing-content-items">
         <div className="nft-pricing-item">
-          <Link to={""}>EAS Platinum Collection</Link>
+          <Link href={""}>EAS Platinum Collection</Link>
         </div>
         <div className="nft-pricing-item">
           <span>1 ETH</span>
@@ -62,7 +63,7 @@ const NftPricingItem = ({ price, description }) => {
    
       <div className="nft-pricing-content-items">
         <div className="nft-pricing-item">
-          <Link to={""}>Charity NFTs</Link>
+          <Link href={""}>Charity NFTs</Link>
         </div>
         <div className="nft-pricing-item">
           <span>1 ETH</span>
@@ -75,7 +76,7 @@ const NftPricingItem = ({ price, description }) => {
       </div>
       <div className="nft-pricing-content-items">
         <div className="nft-pricing-item">
-          <Link to={""}>Neighborhood NFTs</Link>
+          <Link href={""}>Neighborhood NFTs</Link>
         </div>
         <div className="nft-pricing-item">
           <span>1-3 ETH</span>
