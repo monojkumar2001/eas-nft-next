@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import axios from "axios";
 import { convertIpfsAddress } from "../../utils";
+import Image from "next/image";
 
 const ImageCard = ({ uniqueData }) => {
   const [nftInfo, setNftInfo] = useState([]);
@@ -79,10 +79,10 @@ const ImageCard = ({ uniqueData }) => {
 
             <div className="modal-body filter-image-item-model">
               <div className="filter-model-img">
-                <LazyLoadImage
+                <Image width={500}
+                height={625}
+                alt="nft image"
                   src={convertIpfsAddress(nftInfo.image)}
-                  width="auto"
-                  height="auto"
                 />
               </div>
               <div className="filter-nft-content">

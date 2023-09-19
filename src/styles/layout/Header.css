@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap');
 .header{
   background-color: #141820;
   padding: 10px 0px;
@@ -44,10 +45,11 @@ li.nav-list a{
 }
 .dp-menu-ul li a{
   color: var(--black-color);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
   font-family: var(--body-font);
+  padding: 5px 0;
 }
 li.nav-list a:hover{
   color:var(--main-color);
@@ -62,6 +64,7 @@ header.header {
   position: absolute;
   width: 100%;
   z-index: 99;
+  top: 0;
 }
 .show-nav {
   font-size: 25px;

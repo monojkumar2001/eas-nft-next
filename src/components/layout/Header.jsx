@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Router from "next/router";
-import { useWeb3React } from "@web3-react/core";
+// import { useWeb3React } from "@web3-react/core";
 import ConnectBtn from "../Collection/ConnectBtn";
 
 function Header() {
-  const { active ,deactivate} = useWeb3React();
+  // const { active ,deactivate} = useWeb3React();
 
   const [isSticky, setSticky] = useState(false);
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -32,15 +32,15 @@ function Header() {
     };
   }, []);
 
-  const logout = () => {
-    if (active) {
-      return (
-        <li onClick={disconnect}>
-          <Link to={"/"}>Logout</Link>
-        </li>
-      );
-    }
-  };
+  // const logout = () => {
+  //   if (active) {
+  //     return (
+  //       <li onClick={disconnect}>
+  //         <Link to={"/"}>Logout</Link>
+  //       </li>
+  //     );
+  //   }
+  // };
 
 
   const disconnect = () => {
@@ -55,11 +55,12 @@ function Header() {
 
   return (
     // <!-- =====================Navigation=========== -->
+    <>
     <header className={`header ${isSticky ? "sticky" : ""}`}>
       <div className="header-wrapper">
         <nav className="navigation">
           <div className="logo logo-nav">
-            <Link to="/" className="logo-link">
+            <Link href="/" className="logo-link">
               <img src="/images/logo.svg" alt="" />
             </Link>
           </div>
@@ -70,14 +71,14 @@ function Header() {
             </div>
             <ul className="menu-nav-ul">
               <div className="mb-logo">
-                <Link to="/" className="logo-link">
+                <Link href="/" className="logo-link">
                   <img src="/images/logo.svg" alt="" className="logo-img" />
                 </Link>
               </div>
               <div className="left-side d-flex algin-items-center">
                 <li className="nav-list">
                   <Link
-                    to="/"
+                    href="/"
                     className="nav-link home-icons"
                     onClick={_toggleSidebar}
                   >
@@ -96,17 +97,17 @@ function Header() {
                     } else toggleActiveDrop(1);
                   }}
                 >
-                  <Link to="#">NFT Collections</Link>
+                  <Link href="#">NFT Collections</Link>
                   <div className="dp-menu">
                     <ul className="dp-menu-ul">
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/nft-collection"}>NFT Collection</Link>
+                        <Link href={"/nft-collection"}>NFT Collection</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/my-nft-list"}>My NFT List</Link>
+                        <Link href={"/my-nft-list"}>My NFT List</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/marketplace"}>Marketplace</Link>
+                        <Link href={"/marketplace"}>Marketplace</Link>
                       </li>
                     </ul>
                   </div>
@@ -121,20 +122,20 @@ function Header() {
                     } else toggleActiveDrop(2);
                   }}
                 >
-                  <Link to="#">Resources</Link>
+                  <Link href="#">Resources</Link>
                   <div className="dp-menu">
                     <ul className="dp-menu-ul">
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/referral"}>Referral</Link>
+                        <Link href={"/referral"}>Referral</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/nft-use-cases"}>NFT Use Cases</Link>
+                        <Link href={"/nft-use-cases"}>NFT Use Cases</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/nft-pricing"}>NFT Pricing</Link>
+                        <Link href={"/nft-pricing"}>NFT Pricing</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/docs"}>Knowledge Base & FAQ</Link>
+                        <Link href={"/docs"}>Knowledge Base & FAQ</Link>
                       </li>
                     </ul>
                   </div>
@@ -149,23 +150,23 @@ function Header() {
                     } else toggleActiveDrop(3);
                   }}
                 >
-                  <Link to="#">About</Link>
+                  <Link href="#">About</Link>
                   <div className="dp-menu">
                     <ul className="dp-menu-ul">
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/about"}>Our Mission</Link>
+                        <Link href={"/about"}>Our Mission</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/contact"}>Contact</Link>
+                        <Link href={"/contact"}>Contact</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/careers"}>Careers</Link>
+                        <Link href={"/careers"}>Careers</Link>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li className="nav-list" onClick={_toggleSidebar}>
-                  <Link to="/news" className="nav-link">
+                  <Link href="/news" className="nav-link">
                     News
                   </Link>
                 </li>
@@ -179,21 +180,21 @@ function Header() {
                     } else toggleActiveDrop(4);
                   }}
                 >
-                  <Link to="#">My Account</Link>
+                  <Link href="#">My Account</Link>
 
                   <div className="dp-menu">
                     <ul className="dp-menu-ul">
                       <li onClick={_toggleSidebar}>
-                        <Link to={"/account"}>Account Dashboard</Link>
+                        <Link href={"/account"}>Account Dashboard</Link>
                       </li>
-                     {logout()}
+                     {/* {logout()} */}
                     </ul>
                   </div>
                 </li>
               </div>
 
               <div className="left-side d-flex algin-items-center">
-                <ConnectBtn />
+                {/* <ConnectBtn /> */}
               </div>
             </ul>
           </div>
@@ -203,6 +204,7 @@ function Header() {
         </nav>
       </div>
     </header>
+    </>
     // {/* <!-- =====================Navigation end =========== --> */}
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ColorRing } from "react-loader-spinner";
-import "../../Style/category.css";
+import "../../styles/category.css";
 import Swal from "sweetalert2";
 import { useNavigate,useLocation } from "react-router-dom";
 

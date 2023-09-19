@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import axios from "axios";
-import { convertIpfsAddress } from "../../utils";
+// import { convertIpfsAddress } from "../../app/utils";
 import DynamicModal from './Dynamicmodel'
+import Image from "next/image";
 
 const ImageCard = ({nfts}) => {
 
@@ -45,9 +45,9 @@ const ImageCard = ({nfts}) => {
             <div className="nft-img" >
               {
                 item.status == 'pending' ?
-                <img  src="https://st7yvhbtkj4kdnf3vwyncrotnch5e5b5yuga3um6thhfhgg7fwgq.arweave.net/lP-KnDNSeKG0u62w0UXTaI_SdD3FDA3RnpnOU5jfLY0?ext=png" alt="" />
+                <Image width={500} height={625}  src="https://st7yvhbtkj4kdnf3vwyncrotnch5e5b5yuga3um6thhfhgg7fwgq.arweave.net/lP-KnDNSeKG0u62w0UXTaI_SdD3FDA3RnpnOU5jfLY0?ext=png" alt="nft image" />
                 :
-                <img  src={`https://ipfs.io/ipfs/${item.ipfs}`} alt="" />
+                <Image width={500} height={625}   src={`https://ipfs.io/ipfs/${item.ipfs}`} alt="nft image" />
               }
             </div>
             <div className="nft-titles">

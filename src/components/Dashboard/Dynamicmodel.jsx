@@ -1,6 +1,6 @@
+"use client";
 import React, { useState, useEffect } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { contact_address, contact_ABI } from "../../../src/config";
+import { contact_address, contact_ABI } from "../../app/config";
 import { ethers } from "ethers";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -8,8 +8,9 @@ import { useNavigate } from "react-router-dom";
 import NFTModelCongratulations from "../Collection/NFTModelCongratulations";
 import AttributesCard from "./AttributesCard";
 import { useWeb3React } from "@web3-react/core";
-import "../../Style/hourglass.css";
+import "../../styles/hourglass.css";
 import Hammer from "../Loading/hammer";
+import Image from "next/image";
 const Dynamicmodel = ({ price, item }) => {
   const { account, library } = useWeb3React();
 
@@ -113,10 +114,11 @@ const Dynamicmodel = ({ price, item }) => {
 
               <div className="modal-body filter-image-item-model">
                 <div className="filter-model-img">
-                  <LazyLoadImage
+                  <Image
                     src={`https://ipfs.io/ipfs/${item.ipfs}`}
-                    width="auto"
-                    height="auto"
+                  width={500}
+                  height={625}
+                  alt="nft image"
                   />
                 </div>
                 <div className="filter-nft-content">

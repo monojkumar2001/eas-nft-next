@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Style/hourglass.css";
+import "../../styles/hourglass.css";
 const hammer = () => {
   return (
     <div className="hero-hourglass">

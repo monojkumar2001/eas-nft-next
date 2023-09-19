@@ -19,11 +19,11 @@ function KnowledgeBaseFaq() {
       })
   }, [])
   
-if(loading){
-  return (
-    <Loading/>
-  );
-}
+// if(loading){
+//   return (
+//     <Loading/>
+//   );
+// }
   return (
     <>
       {/* ================== Knowledge Base Banner section =================== */}

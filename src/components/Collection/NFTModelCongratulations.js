@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../Style/NftModelCongratulation.css";
+import "../../styles/NftModelCongratulation.css";
 const NFTModelCongratulations = (props) => {
  
   const handleNftModel = () => {

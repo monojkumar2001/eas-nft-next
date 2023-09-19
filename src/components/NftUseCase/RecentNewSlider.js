@@ -1,10 +1,11 @@
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FaChevronRight } from "react-icons/fa";
 import { Pagination, A11y } from "swiper/modules";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Loading from "../Loading/Loading";
 const RecentNewSlider = () => {
   const handleLinkClick = () => {
@@ -63,7 +64,7 @@ const RecentNewSlider = () => {
                   return (
                     <SwiperSlide key={i}>
                       <div className="recent-new-slider-con recent-new-slider-con-2">
-                        <Link to={`/news/${item.slug}`}  onClick={handleLinkClick}>
+                        <Link href={`/news/${item.slug}`}  onClick={handleLinkClick}>
                           <div className="recent-news-content">                 
                             <button className="alt-custom-btn">
                               Press Releases

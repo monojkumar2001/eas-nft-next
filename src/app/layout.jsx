@@ -36,10 +36,10 @@ export default function RootLayout({ children }) {
     return library
   }
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={false}>
       {/* <Web3ReactProvider getLibrary={getLibrary}> */}
-        {/* <Header /> */}
-        <body suppressHydrationWarning={true} className={dm_sans.className}>{children}</body>
+        <Header />
+        <body  className={dm_sans.className}>{children}</body>
         <Footer/>
       {/* </Web3ReactProvider> */}
     </html>

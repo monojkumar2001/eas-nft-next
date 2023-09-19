@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React,{useState} from 'react'
 import Swal from 'sweetalert2';
-import "../../Style/email.css"
+import "../../styles/email.css"
 
 
 const Email = ({changeStep}) => {
