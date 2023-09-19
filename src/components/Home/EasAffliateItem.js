@@ -30,7 +30,7 @@ const EasAffliateItem = () => {
               <div
                 className="eas-affiliate-img"
               >
-                <Image src="/images/home/affiliate-img.svg" />
+                <Image width={552} height={552} src="/images/home/affiliate-img.svg"  alt='eas affiliate img' />
               </div>
             </div>
           </div>

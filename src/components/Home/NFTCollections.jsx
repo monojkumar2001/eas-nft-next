@@ -1,11 +1,11 @@
-import React from "react";
-import NFTCollectionsItem from "./NFTCollectionsItem";
 import { FaMapMarkerAlt, FaCity } from "react-icons/fa";
-import { RiHandHeartFill,RiNftLine } from "react-icons/ri";
+import { RiHandHeartFill, RiNftLine } from "react-icons/ri";
+import NFTCollectionsItem from "./NFTCollectionsItem";
+
 const NFTCollections = () => {
   return (
     <>
-      <section className="nft-collections" >
+      <section className="nft-collections">
         <div className="container">
           <div className="nft-collections-wrapper">
             <div className="nft-collection-header mb-5">
@@ -46,7 +46,7 @@ const NFTCollections = () => {
                 </div>
                 <div className="col-lg-5 col-md-12">
                   <NFTCollectionsItem
-                  iconImg={<RiNftLine />}
+                    iconImg={<RiNftLine />}
                     title="Gold & Platinum Collections"
                     description="Selected by EAS, the Gold Collection includes iconic
                 buildings and notable addresses, while the Platinum

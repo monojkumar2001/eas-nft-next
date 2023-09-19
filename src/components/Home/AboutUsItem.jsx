@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from "next/link";
+import Link  from "next/link";
 import Image from 'next/image';
+
 const AboutUsItem = () => {
   return (
     <>
@@ -21,7 +22,7 @@ const AboutUsItem = () => {
                 and manage these new digital address rights and drive price
                 appreciation for NFT buyers.
               </p>
-              <Link href={"/about"} className="custom-btn learn-more-btn mt-4">
+              <Link href="/about" className="custom-btn learn-more-btn mt-4">
                 learn more
               </Link>
             </div>
@@ -31,20 +32,20 @@ const AboutUsItem = () => {
                   className="about-1-img"
                  
                 >
-                  <Image width={500} height={625} src="/images/home/about-1.webp" />
+                  <Image width={271} height={340} src="/images/home/about-1.webp" alt="eas nft img"/>
                 </div>
                 <div
                   className="about-2-img"
                 
                 >
-                  <Image width={500} height={625} src="/images/home/about-2.png" />
+                  <Image width={271} height={340} src="/images/home/about-2.png" alt="eas nft img"/>
                 </div>
-                <div
+                {/* <div
                   className="about-3-img"
                  
                 >
-                  <Image src="/images/home/about-us-img.svg" />
-                </div>
+                  <Image width={600} height={500} src="/images/home/about-us-img.svg"  alt='eas nft'/>
+                </div> */}
               </div>
             </div>
           </div>

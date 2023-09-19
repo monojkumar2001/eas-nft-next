@@ -21,7 +21,6 @@
   --main-color: #00cddf;
   --black-color: #141820;
   --white-color: #ffffff;
-  --body-font: "DM Sans";
   --primary-font: "BourtonBase";
   --secondary-font: "BourtonBaseDrop";
   --third-font: "BourtonLineBold";
@@ -78,7 +77,6 @@ body {
   background-color: #020015 !important ;
   font-size: var(--p-font) !important;
   font-weight: 400 !important;
-  font-family: var(--body-font);
   line-height: var(--p-font-height);
   color: var(--white-color) !important;
   overflow-x: hidden;
@@ -89,7 +87,7 @@ img {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
 }
 

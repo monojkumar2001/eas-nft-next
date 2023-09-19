@@ -1,0 +1,42 @@
+
+.knowledge_base_banner {
+    width: 100%;
+    padding: 200px 0 150px 0;
+    background-image: url(../../public/images/knowledge-base/knowledge-banner-img.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .knowledge_base_banner_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+  }
+  .knowledge_base_banner_wrapper .eas_knowledge_title {
+    position: absolute;
+    font-size: 44px;
+    font-family: var(--secondary-font);
+    width: 80%;
+    margin: auto;
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .knowledge_base_banner {
+      width: 100%;
+      padding: 120px 0 100px 0;
+      background-image: url(../../public/images/knowledge-base/knowledge-banner-img.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .knowledge_base_banner_wrapper .eas_knowledge_title {
+      font-size: 30px;
+      width: 100%;
+  }
+}

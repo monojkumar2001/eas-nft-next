@@ -1,11 +1,10 @@
-import React from 'react'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import style from '../../styles/easbanner.module.css'
 const EasBanner = ({title}) => {
   return (
     <>
-      <div className="knowledge-base-banner">
-        <div className="knowledge-base-banner-wrapper">
-          <h2 className="eas-knowledge-title">{title}</h2>
+      <div className={style.knowledge_base_banner}>
+        <div className={style.knowledge_base_banner_wrapper}>
+          <h2 className={style.eas_knowledge_title}>{title}</h2>
         </div>
       </div>
     </>

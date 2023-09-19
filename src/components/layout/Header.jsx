@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import Link from "next/link";
+import Router from "next/router";
 import { useWeb3React } from "@web3-react/core";
 import ConnectBtn from "../Collection/ConnectBtn";
 
 function Header() {
   const { active ,deactivate} = useWeb3React();
-  const navigate = useNavigate();
+
   const [isSticky, setSticky] = useState(false);
   const [sidebarActive, setSidebarActive] = useState(false);
   const _toggleSidebar = () => {
@@ -50,7 +50,7 @@ function Header() {
     localStorage.removeItem("user_id");
     localStorage.removeItem("auth")
     window.location.reload()
-    navigate("/")
+    Router("/")
   };
 
   return (
@@ -76,7 +76,7 @@ function Header() {
               </div>
               <div className="left-side d-flex algin-items-center">
                 <li className="nav-list">
-                  <HashLink
+                  <Link
                     to="/"
                     className="nav-link home-icons"
                     onClick={_toggleSidebar}
@@ -84,7 +84,7 @@ function Header() {
                     <span>
                       <img src="/images/header/home-icon.svg" alt="" />
                     </span>
-                  </HashLink>
+                  </Link>
                 </li>
                 <li
                   className={

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import "../../Style/WelcomeEasWallect.css"
-import { Link ,useNavigate} from 'react-router-dom';
+import "../../styles/WelcomeEasWallect.css"
+import {useNavigate} from 'next/navigation';
+import Link from 'next/link';
 import { useWeb3React } from '@web3-react/core';
 
 const WelcomeToEasNftWallet = ({toggleHandleWallet,easNftWallet,signMessage}) => {

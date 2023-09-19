@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import SocialMediaLinkItem from "../SocialMediaLink/SocialMediaLinkItem";
 import axios from 'axios';
-
+import '../../styles/layout/Header.css'
 const Newsletter = () => {
 
     const [inputField, setInputField] = useState({

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "next/link";
+import Link  from "next/link";
 import UseCaseCircle from './UseCaseCircle';
 const UseCasesItem = () => {
   return (
@@ -15,10 +15,10 @@ const UseCasesItem = () => {
               <p className="pb-3">
                 When many people hear “NFT” they may think of silly overpriced
                 monkey doodles. But the reality is that the actual technological
-                power of non-fungible tokens on the blockchain goes{" "}
+                power of non-fungible tokens on the blockchain goes
                 <span className="focus-color-2">
-                  <Link to={"/nft-use-cases"}>SO far beyond</Link>
-                </span>{" "}
+                  <Link href="/nft-use-cases">SO far beyond</Link>
+                </span>
                 just artwork alone.
               </p>
               <p>
@@ -43,7 +43,7 @@ const UseCasesItem = () => {
               <UseCaseCircle />
             </div>
             <div className="learn-more-btns">
-              <Link to={'/nft-use-cases'} className="custom-btn about-use-cases-btn">
+              <Link href={'/nft-use-cases'} className="custom-btn about-use-cases-btn">
                 LEARN MORE ABOUT USE CASES
               </Link>
             </div>

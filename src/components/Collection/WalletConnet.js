@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useNavigate, useLocation } from "react-router-dom"; // Removed useLocation as it's not used
+import { useNavigate, useLocation } from "next/navigation"; // Removed useLocation as it's not used
 import { useWeb3React } from "@web3-react/core";
 import { connectors } from "../../wallet/connectors";
 import WelcomeToEasNftWallet from "../Popup/WelcomeToEasNftWallet";
 import { toHex } from "../../wallet/utils";
+import Image from "next/image";
 
 const WalletConnet = ({ opt, walletConnect, toggleHandleWallet }) => {
   const baseUrl = "accurentvc.com";
@@ -234,7 +234,7 @@ const WalletConnet = ({ opt, walletConnect, toggleHandleWallet }) => {
                   className="connect-wallet-item d-flex align-items-center flex-column gap-2 justify-content-center"
                 >
                   <div className="wallet-img">
-                    <LazyLoadImage src="/images/header/metamask.png" />
+                    <Image width={60} height={60} src="/images/header/metamask.png" />
                   </div>
                   <h4>Metamask</h4>
                   <span>Connect to your Metamask</span>
@@ -247,7 +247,7 @@ const WalletConnet = ({ opt, walletConnect, toggleHandleWallet }) => {
                   className="connect-wallet-item d-flex align-items-center flex-column gap-2 justify-content-center"
                 >
                   <div className="wallet-img">
-                    <LazyLoadImage src="/images/header/coinbase.png" />
+                    <Image width={60} height={60} src="/images/header/coinbase.png" />
                   </div>
                   <h4>Coinbase Wallet</h4>
                   <span>Connect to your Coinbase Wallet</span>

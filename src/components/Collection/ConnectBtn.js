@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { truncateAddress } from "../../wallet/utils";
 import WalletConnet from "./WalletConnet";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "next/navigation";
 
 const ConnectBtn = () => {
   const navigate = useNavigate();

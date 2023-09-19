@@ -1,4 +1,4 @@
-import "../../Style/video.css";
+import "../../styles/video.css";
 function Video({ isPlay, handlePlay }) {
   return (
     <>

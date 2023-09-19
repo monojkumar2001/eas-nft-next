@@ -200,10 +200,11 @@
   position: absolute;
 }
 .about-1-img img {
-  width: 65%;
+  width: 90%;
+  object-fit: cover;
 }
 .about-2-img img {
-  width: 65%;
+  width: 90%;
   margin: auto;
   object-fit: cover;
 }

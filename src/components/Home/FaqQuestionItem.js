@@ -1,7 +1,7 @@
 import React from "react";
 import Faq from "react-faq-component";
 import { Data } from "../../FaqData/FaqQuestionData";
-import { Link } from "next/link";
+import  Link  from "next/link";
 import Image from "next/image";
 const FaqQuestionItem = () => {
   const styles = {
@@ -30,7 +30,7 @@ const FaqQuestionItem = () => {
                   <p>
                     Still have questions? Visit our{" "}
                     <span>
-                      <Link to={"/docs"}>Knowledge Base</Link>{" "}
+                      <Link href={"/docs"}>Knowledge Base</Link>{" "}
                     </span>{" "}
                     for more answers.
                   </p>
@@ -39,9 +39,12 @@ const FaqQuestionItem = () => {
             </div>
             <div className="col-lg-5 col-md-12">
               <div className="faq-question-img">
-                <Image
+                <Image 
+                width={400}
+                height={400}
                   className="sfdfsd"
                   src="/images/home/faq-question-img.svg"
+                  alt="eas faq img"
                 />
               </div>
             </div>
