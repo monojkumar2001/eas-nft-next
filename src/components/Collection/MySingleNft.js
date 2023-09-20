@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { convertIpfsAddress } from "../../utils";
+import { convertIpfsAddress } from "../../app/utils";
 import { ethers } from "ethers";
-import { MarketPlace_Address, Market_ABI, contact_address } from "../../config";
+import { MarketPlace_Address, Market_ABI, contact_address } from "../../app/config";
 import Swal from "sweetalert2";
 import Web3 from "web3";
 import { useWeb3React } from "@web3-react/core";

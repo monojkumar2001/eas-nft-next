@@ -3,7 +3,7 @@ import Link from "next/link";
 import Router from "next/router";
 // import { useWeb3React } from "@web3-react/core";
 import ConnectBtn from "../Collection/ConnectBtn";
-
+import dynamic from "next/dynamic";
 function Header() {
   // const { active ,deactivate} = useWeb3React();
 
@@ -208,4 +208,4 @@ function Header() {
     // {/* <!-- =====================Navigation end =========== --> */}
   );
 }
-export default Header;
+export default dynamic (()=>Promise.resolve(Header), {ssr:false});

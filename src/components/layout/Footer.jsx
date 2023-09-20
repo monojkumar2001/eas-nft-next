@@ -2,6 +2,7 @@ import Link from "next/link";
 import "../../styles/layout/footer.css";
 import Newsletter from "../Newsletter/Newsletter";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 const Footer = () => {
   // const handleLinkClick = () => {
   //   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -94,4 +95,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default dynamic(()=>Promise.resolve(Footer), {ssr:false});

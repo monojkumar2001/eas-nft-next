@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import "../../Style/myCollection.css";
+import "../../styles/myCollection.css";
 
 const Sale = (props) => {
     const [error, setError] = useState('')

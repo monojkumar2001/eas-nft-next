@@ -127,9 +127,9 @@ const filterData = () => {
 useEffect(() => {
   filterData();
 }, [search,option])
-if(loading){
-  return <Loading2/>;
-}
+// if(loading){
+//   return <Loading2/>;
+// }
 
   return (
     <>

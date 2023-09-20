@@ -1,5 +1,5 @@
 import React from "react";
-import { convertIpfsAddress } from "../../utils";
+import { convertIpfsAddress } from "../../app/utils";
 import { Link } from "react-router-dom";
 const SaleNft = (props) => {
   return (

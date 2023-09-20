@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Style/myCollection.css";
+import "../../styles/myCollection.css";
 
 const TransferWallet = (props) => {
   return (

@@ -27,6 +27,7 @@
     "react-places-autocomplete": "^7.3.0",
     "react-router-dom": "^6.16.0",
     "sweetalert2": "^11.7.28",
-    "swiper": "^10.2.0"
+    "swiper": "^10.2.0",
+    "web3": "^4.1.2"
   }
 }
