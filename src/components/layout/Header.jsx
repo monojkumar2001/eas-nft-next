@@ -43,15 +43,15 @@ function Header() {
   // };
 
 
-  const disconnect = () => {
-    deactivate();
-    window.localStorage.setItem("provider", undefined);
-    localStorage.removeItem("provider");
-    localStorage.removeItem("user_id");
-    localStorage.removeItem("auth")
-    window.location.reload()
-    Router("/")
-  };
+  // const disconnect = () => {
+  //   deactivate();
+  //   window.localStorage.setItem("provider", undefined);
+  //   localStorage.removeItem("provider");
+  //   localStorage.removeItem("user_id");
+  //   localStorage.removeItem("auth")
+  //   window.location.reload()
+  //   Router("/")
+  // };
 
   return (
     // <!-- =====================Navigation=========== -->

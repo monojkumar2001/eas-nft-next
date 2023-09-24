@@ -3,16 +3,17 @@ import React, { useState } from "react";
 
 import "../styles/home.css";
 import { useParams } from "next/navigation";
-import Googlemap from "../components/Googleaddress/Address";
 import Image from "next/image";
+import Googlemap from "@/components/Googleaddress/Address";
+import Googlecategory from "@/components/Googleaddress/Category";
+import Googleemail from "@/components/Googleaddress/Email";
+import Googleconnect from "@/components/Googleaddress/Connect";
 import HeroCardItems from "@/components/Home/HeroCardItems";
-
 import UseCasesItem from "@/components/Home/UseCasesItem";
 import FaqQuestionItem from "@/components/Home/FaqQuestionItem";
 import EasAffliateItem from "@/components/Home/EasAffliateItem";
-import AboutUsItem from "../components/Home/AboutUsItem";
 import NFTCollections from "@/components/Home/NFTCollections.jsx";
-import AboutusItem from "../components/Home/AboutUsItem";
+import AboutUsItem from "@/components/Home/AboutUsItem";
 
 export default function Home() {
   const [step, setstep] = useState("1");

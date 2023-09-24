@@ -1,11 +1,14 @@
 'use client';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "../../styles/myCollection.css";
 import axios from "axios";
 import SaleNft from "@/components/Collection/SaleNft";
 import Loading from "@/components/Loading/Loading";
 
+
 const NftCollection = () => {
+
+
   const [activeNfts, setActiveNfts] = useState("ALL");
   const [category, setCategory] = useState([]);
 
@@ -56,6 +59,7 @@ const NftCollection = () => {
   }, [activeNfts]);
 
 
+  console.log('NFTs',NFTs)
 
 
 
@@ -63,9 +67,10 @@ const NftCollection = () => {
   if (loading) {
     return (
       <Loading/>
+      
     );
   }
-
+  
  // setLoading(false);
 
   // let updatedData = NFTs;

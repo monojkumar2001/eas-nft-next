@@ -10,6 +10,7 @@ const SaleNft = (props) => {
         to={`/nft-details/${props.tokenId}`}
       >
         <div className="nft-imgs">
+          {/* <img src={convertIpfsAddress(props.image)} alt="" /> */}
           <img src={convertIpfsAddress(props.image)} alt="" />
         </div>
         <div className="nft-titles">

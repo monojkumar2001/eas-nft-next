@@ -32,13 +32,13 @@ const AboutUsItem = () => {
                   className="about-1-img"
                  
                 >
-                  <Image width={271} height={340} src="/images/home/about-1.webp" alt="eas nft img"/>
+                  <Image width={500} height={625} src="/images/home/about-1.webp" alt="eas nft img"/>
                 </div>
                 <div
                   className="about-2-img"
                 
                 >
-                  <Image width={271} height={340} src="/images/home/about-2.png" alt="eas nft img"/>
+                  <Image  width={500} height={625} src="/images/home/about-2.png" alt="eas nft img"/>
                 </div>
                 {/* <div
                   className="about-3-img"

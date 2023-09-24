@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { truncateAddress } from "../../wallet/utils";
 import WalletConnet from "./WalletConnet";
-import { useNavigate } from "next/navigation";
+import { usePathname  } from "next/navigation";
 
 const ConnectBtn = () => {
-  const navigate = useNavigate();
+  const navigate = usePathname();
 
-  const { active, account,deactivate} = useWeb3React();
+  // const { active, account,deactivate} = useWeb3React();
 
   const disconnect = () => {
     deactivate();

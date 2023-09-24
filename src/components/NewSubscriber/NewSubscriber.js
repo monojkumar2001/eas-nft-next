@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../Style/newSubscriber.css';
+import '../../styles/newSubscriber.css';
 const NewSubscriber = () => {
   return (
     <>

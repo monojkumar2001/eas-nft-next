@@ -1,0 +1,84 @@
+.faq_blog_con h4{
+font-size: 18;
+font-family: var(--secondary-font);
+color: var(--main-color);
+font-weight: 600;
+}
+.faq_blog_item{
+    display: flex;
+    align-items: start;
+    gap: 15px;
+}
+.faq_blog_item .faq_blog_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.faq_blog_item .faq_blog_content span{
+    color: #7B92AD;
+    
+}
+.faq_blog_item .faq_blog_content a{
+    color: #31274B;
+}
+
+.blog_Learn_item{
+    background-image: url(../../public/images/blog/blog-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.subscribe_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.subscribe_item h3{
+    text-align: center;
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    margin-bottom: 20px;
+}
+.subscribe_item:hover{
+    text-align: center;
+    color: var(--white-color);
+}
+
+
+.blog_sub_update{
+    margin-top: 50px;
+
+}
+
+.blog_sub_update h5{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    color: #31274B;
+}
+.blog_sub_update .footer-email-fluid-2 {
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #3F414A;
+    background:none;
+
+    font-family: var(--body-font);
+    width: 100%;
+    color: #31274B;
+}
+.blog_sub_update .footer-email-fluid-2 input{
+    border: none;
+    padding: 10px 15px;
+}

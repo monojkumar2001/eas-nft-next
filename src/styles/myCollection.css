@@ -33,18 +33,64 @@ border-radius: 5px;
 .my-collection-items .images-card #nft-model{
     display: none;
 }
-.my-collection-page  .dashboard-card-items .images-card .nft-imgs img:nth-child(1):hover {
+/* img over */
+
+
+.images-card:hover .nft-imgs img {
     transform: scale(1.05);
  }
- .my-collection-page  .dashboard-card-items .images-card .nft-imgs {
-     overflow: hidden;
-     width: 100%;
+
+.images-card .nft-imgs{
+    position: relative;
  }
- .my-collection-page  .dashboard-card-items .images-card .nft-imgs img{
+ .my-collection-items .images-card:hover::before{
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+
+ }
+ 
+ .my-collection-items .images-card::before{
+position: absolute;
+content: '';
+bottom: -100%;
+left: 0;
+z-index: 1;
+width: 100%;
+height: 100%;
+/* background-color: red; */
+transition: all 0.6s ease-in-out;
+opacity: 0;
+visibility: hidden;
+ }
+.images-card .nft-imgs img{
     width: 100%;
     transition: 0.4s;
  }
- .my-collection-page .dashboard-card-items .images-card .nft-titles p {
+ .images-card .nft-titles{
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        position: absolute;
+        bottom: -10%;
+        left: 0;
+        opacity: 1;
+        width: 100%;
+        height:auto;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s ease-in-out;
+        background: #160E2C;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.59);
+ }
+
+ .images-card:hover .nft-titles {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0;
+}
+.images-card .nft-titles p {
      font-size: 15px;
      font-weight: 600;
      color: var(--white-color);
@@ -52,15 +98,17 @@ border-radius: 5px;
      text-align: start;
      line-height: 18px;
      opacity: 1;
-     padding:  20px 0 10px 0;
+     padding:  0px 0 20px 0;
  }
- .my-collection-page .dashboard-card-items .images-card .buy-nft-btn:hover{
+ .images-card .buy-nft-btn:hover{
  background-color: var(--white-color);
  color: var(--main-color);
  }
- .my-collection-page .dashboard-card-items .images-card .buy-nft-btn{
+  .images-card .buy-nft-btn{
 width: 100%;
  }
+
+
 .collection-refresh-btn{
     padding: 8px;
     border: none;

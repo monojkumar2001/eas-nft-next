@@ -1,54 +1,79 @@
-'use client';
-import React,{useState,useEffect} from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import "../../styles/knowledgeBase.css";
 import axios from "axios";
 
 import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
 import EasNftTypes from "@/components/KnowledgeBaseFaq/EasNftTypes";
 import Loading from "@/components/Loading/Loading";
+import Image from "next/image";
+import Link from "next/link";
+import BlogItem from "@/components/Blogs/BlogItem";
+import BlogsSubscribe from "@/components/Blogs/BlogsSubscribe";
 
 function KnowledgeBaseFaq() {
-
-  const [page, setPage] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [page, setPage] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-      axios.get('api/page').then(res => {
-        setPage(res.data.data)
-        setLoading(false)
-      })
-  }, [])
-  
-// if(loading){
-//   return (
-//     <Loading/>
-//   );
-// }
+    axios.get("api/page").then((res) => {
+      setPage(res.data.data);
+      setLoading(false);
+    });
+  }, []);
+
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get("api/blog").then((res) => {
+      setData(res.data);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <>
       {/* ================== Knowledge Base Banner section =================== */}
-    <EasBanner title="EAS Knowledge Base"/>
+      <EasBanner title="EAS Knowledge Base" />
       {/* =================== KnowLedge Base Faq =================== */}
       <div className="knowledge-base-faq cpy-6">
         <div className="container">
-          <div className="knowledge-base-faq-wrapper" data-aos="fade-up"
-     data-aos-duration="3000">
-            <div className="knowledge-base-search-item">
-              <h4>Welcome to where the learning happens</h4>
-              <div className="knowledge-base-search-input-fluid mt-4 d-flex align-items-center gap-3">
-                <span>
-                  <img src="/images/knowledge-base/search-icon.svg" alt="" />
-                </span>
-                <input type="text" placeholder="Search..." />
+          <div className="row">
+            <div className="col-lg-9 col-md-12">
+              <div
+                className="knowledge-base-faq-wrapper"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >
+                <div className="knowledge-base-search-item">
+                  <h4>Welcome to where the learning happens</h4>
+                  <div className="knowledge-base-search-input-fluid mt-4 d-flex align-items-center gap-3">
+                    <span>
+                      <img
+                        src="/images/knowledge-base/search-icon.svg"
+                        alt=""
+                      />
+                    </span>
+                    <input type="text" placeholder="Search..." />
+                  </div>
+                </div>
+
+                <div className="faq_all_question">
+                {page && page.length > 0 ? (
+                        <EasNftTypes page={page} />
+                      ) : (
+                        ""
+                      )}
+                </div>
               </div>
             </div>
-            
+            <div className="col-lg-3 col-md-12">
+                  <BlogItem />
+<BlogsSubscribe/>
 
-                {
-                    page && page.length > 0 ? <EasNftTypes page={page}/> : ''
-                
-                }
-
+                </div>
           </div>
         </div>
       </div>
