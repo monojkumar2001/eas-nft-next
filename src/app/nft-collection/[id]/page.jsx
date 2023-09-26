@@ -8,8 +8,8 @@ import {
   contact_ABI,
   MarketPlace_Address,
   Market_ABI,
-} from "../../app/config";
-import { fetchJsonFromIpfs, convertIpfsAddress } from "../utils";
+} from "../../../app/config";
+import { fetchJsonFromIpfs, convertIpfsAddress } from "../../utils";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 

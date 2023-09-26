@@ -49,7 +49,7 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 50%;
   background-color: var(--main-color);
 }
@@ -142,6 +142,9 @@
   color: var(--main-color);
   border: none;
 }
+.faq-help-item-con .faq-help-left-item a span{
+  color: var(--main-color);
+}
 .faq-help-item-con .faq-help-left-item .faq-help-btn{
   color: #566e8b;
   font-size: 18px;
@@ -150,6 +153,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
+}
+a.faq-help-btn.d-flex.gap-2 span{
+  color: var(--main-color);
 }
 .faq-help-item-con .faq-help-left-item .faq-help-btn:hover{
   color: var(--main-color);

@@ -1,0 +1,19 @@
+.tag_item_list h4{
+    font-size: 22px;
+    font-family: var(--secondary-font);
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+ .tag_item span {
+margin: 5px;
+background: #F0F5FB;
+padding: 7px;
+border-radius: 4px;
+}
+
+ .tag_item span a{
+    padding: 15px;
+color: var(--black-color);
+font-weight: 500;
+}

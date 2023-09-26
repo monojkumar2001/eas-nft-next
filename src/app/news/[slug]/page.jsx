@@ -1,26 +1,37 @@
-'use client';
-import React, {useState, useEffect}from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Link from "next/link";
 import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
+import Image from "next/image";
+import "../../../styles/news.css";
 import SocialMediaShareItem from "@/components/SocialMediaLink/SocialMediaShareItem";
 import NewSubscriber from "@/components/NewSubscriber/NewSubscriber";
+import BlogItem from "@/components/Blogs/BlogItem";
+import BlogsSubscribe from "@/components/Blogs/BlogsSubscribe";
+import BlogTagsItem from "@/components/Blogs/BlogTagsItem";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import RecentNewSlider from "@/components/NftUseCase/RecentNewSlider";
+import PostCommentBox from "@/components/Blogs/PostCommentBox";
+import PostCommentAnswer from "@/components/Blogs/PostCommentAnswer";
+import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
 const NewsDetails = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const {id} = useParams();
+  const { id } = useParams();
   console.log(id);
   useEffect(() => {
-    axios.get(`api/blog/${id}`).then((res)=>{
-      setData(res.data)
+    axios.get(`api/blog/${id}`).then((res) => {
+      setData(res.data);
       setLoading(false);
       console.log(res.data);
     });
   }, [id]);
- 
+
   return (
     <>
+    
+<EasBanner title={'question'}/>
       <div className="news-details-page">
         <div className="container">
           <div className="page-route">
@@ -36,11 +47,11 @@ const NewsDetails = () => {
               <h1 className="urbanist-dark-22">{data.title}</h1>
 
               <div className="new-img">
-                <img
-                  height="auto"
-                  width="auto"
+                <Image
+                  height={693}
+                  width={1390}
                   src={data.main_image}
-                  alt=''
+                  alt="blog images"
                 />
               </div>
             </div>
@@ -80,39 +91,75 @@ const NewsDetails = () => {
             </div>
           </div>
           <section className="blog-content">
+            <div className="blog-side">
+              <div className="blog-txt-container">
+                <div className="blog-txt">
+                  <div
+                    className="raleway-grey-14"
+                    dangerouslySetInnerHTML={{ __html: data.description }}
+                  ></div>
+                </div>
+              </div>
+
+              <div className="blog-footer-items">
+                <div className="d-flex align-center justify-content-between blog-social-medias">
+                  <BlogTagsItem />
+                  <SocialMediaShareItem />
+                </div>
+
+                <div className="blog-next-previous mt-4 d-flex align-items-center justify-content-between">
+                  <Link href={"/"} className="blog-post-items">
+                    <button className="post-btns">
+                      {" "}
+                      <span>
+                        <FaChevronLeft />
+                      </span>{" "}
+                      PREVIOUS POST
+                    </button>
+                    <h3>How NFTs Can Be Used for Mapping</h3>
+                  </Link>
+                  <Link href={"/"} className="blog-post-items text-end">
+                    <button className="post-btns ">
+                      NEXT POST{" "}
+                      <span>
+                        <FaChevronRight />
+                      </span>
+                    </button>
+                    <h3>How NFTs Can Be Used for Mapping</h3>
+                  </Link>
+                </div>
+                <div className="related-posts mt-5">
+                  <RecentNewSlider />
+                </div>
+
+                <PostCommentAnswer />
+
+                <PostCommentBox />
+              </div>
+            </div>
 
             <div className="tags-media">
-              <p className="read-time">10 Min Read</p>
+              {/* <p className="read-time">10 Min Read</p>
 
               <div className="progress-bar">
-                {/* <div className="progress" style={{ width: `${scroll}%` }} /> */}
+  
               </div>
               <div className="soc-share">
                 <p className="urbanist-black-18">Share:</p>
                 <SocialMediaShareItem />
-              </div>
-            </div>
+              </div> */}
 
-
-            <div className="blog-side">
-              <div className="blog-txt-container">
-                <div className="blog-txt">
-                  <p className="raleway-grey-14"              
-                  > <div
-                      dangerouslySetInnerHTML={{ __html: data.description }}
-                    ></div>
-    
-                  </p>
-                </div>
+              <div className="mt-5">
+                <BlogItem />
+                <BlogsSubscribe />
               </div>
             </div>
           </section>
         </div>
-        <NewSubscriber/>
+        {/* <NewSubscriber /> */}
       </div>
     </>
   );
 };
 
 export default NewsDetails;
-

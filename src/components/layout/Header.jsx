@@ -101,13 +101,13 @@ function Header() {
                   <div className="dp-menu">
                     <ul className="dp-menu-ul">
                       <li onClick={_toggleSidebar}>
-                        <Link href={"/nft-collection"}>NFT Collection</Link>
+                        <Link href={"/address-nfts"}>Address NFTs</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link href={"/my-nft-list"}>My NFT List</Link>
+                        <Link href={"/charity-nfts"}>Charity NFTs</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link href={"/marketplace"}>Marketplace</Link>
+                        <Link href={"/neighborhood-nfts"}>Neighborhood NFTs</Link>
                       </li>
                     </ul>
                   </div>
@@ -120,6 +120,31 @@ function Header() {
                     if (activeDropdown === 2) {
                       toggleActiveDrop(0);
                     } else toggleActiveDrop(2);
+                  }}
+                >
+                  <Link href="#">Marketplace</Link>
+                  <div className="dp-menu">
+                    <ul className="dp-menu-ul">
+                      <li onClick={_toggleSidebar}>
+                        <Link href={"/nft-collection"}>All Minted NFTs</Link>
+                      </li>
+                      <li onClick={_toggleSidebar}>
+                        <Link href={"/my-nft-list"}>My NFTs</Link>
+                      </li>
+                      <li onClick={_toggleSidebar}>
+                        <Link href={"/marketplace"}> NFTs for Sale</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  className={
+                    activeDropdown === 3 ? "nav-list active" : "nav-list"
+                  }
+                  onClick={() => {
+                    if (activeDropdown === 3) {
+                      toggleActiveDrop(0);
+                    } else toggleActiveDrop(3);
                   }}
                 >
                   <Link href="#">Resources</Link>
@@ -142,12 +167,12 @@ function Header() {
                 </li>
                 <li
                   className={
-                    activeDropdown === 3 ? "nav-list active" : "nav-list"
+                    activeDropdown === 4 ? "nav-list active" : "nav-list"
                   }
                   onClick={() => {
-                    if (activeDropdown === 3) {
+                    if (activeDropdown === 4) {
                       toggleActiveDrop(0);
-                    } else toggleActiveDrop(3);
+                    } else toggleActiveDrop(4);
                   }}
                 >
                   <Link href="#">About</Link>
@@ -172,12 +197,12 @@ function Header() {
                 </li>
                 <li
                   className={
-                    activeDropdown === 4 ? "nav-list active" : "nav-list"
+                    activeDropdown === 5 ? "nav-list active" : "nav-list"
                   }
                   onClick={() => {
-                    if (activeDropdown === 4) {
+                    if (activeDropdown === 5) {
                       toggleActiveDrop(0);
-                    } else toggleActiveDrop(4);
+                    } else toggleActiveDrop(5);
                   }}
                 >
                   <Link href="#">My Account</Link>

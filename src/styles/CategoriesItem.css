@@ -1,0 +1,24 @@
+.categories_item_list h4{
+    font-size: 22px;
+    font-family: var(--secondary-font);
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.categories_item_list .categories_item{
+    padding-left: 20px;
+}
+.categories_item_list .categories_item ul{
+    margin-bottom: 10px;
+
+}
+.categories_item_list .categories_item ul li{
+    list-style:disc;
+    
+    color: var(--main-color)
+}
+.categories_item_list .categories_item ul li a{
+    color: var(--black-color);
+    font-size: 16px;
+    font-family: var(--secondary-font);
+}

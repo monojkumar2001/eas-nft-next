@@ -1,0 +1,34 @@
+.post-comment-content{
+    color: var(--black-color);  
+    padding: 37px 50px 50px;
+    background: #fff;
+    box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15);
+}
+.post-comment-content h4{
+    font-size: 25px;
+    color: var(--black-color);
+    font-family: var(--secondary-font);
+    font-weight: 600;
+}
+.post-comment-content label span a{
+color: var(--main-color);
+}
+.post-comment-content .post-comment-input{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.post-comment-content .post-comment-input input{
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.post-comment-content .post-comment-input textarea{
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}

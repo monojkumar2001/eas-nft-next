@@ -6,6 +6,9 @@ import { Pagination, A11y } from "swiper/modules";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+
+import '../../styles/recent-post.css';
+
 import Loading from "../Loading/Loading";
 const RecentNewSlider = () => {
   const handleLinkClick = () => {

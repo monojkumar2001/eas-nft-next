@@ -1,32 +1,25 @@
-import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
-import "../../styles/news.css";
-import Link from "next/link";
-import BlogsSubscribe from "@/components/Blogs/BlogsSubscribe";
-import CategoriesItem from "@/components/Blogs/CategoriesItem";
-import BlogTagsItem from "@/components/Blogs/BlogTagsItem";
-import { FaChevronRight } from "react-icons/fa";
-import axios from "axios";
+import BlogTagsItem from '@/components/Blogs/BlogTagsItem'
+import BlogsSubscribe from '@/components/Blogs/BlogsSubscribe'
+import CategoriesItem from '@/components/Blogs/CategoriesItem'
+import EasBanner from '@/components/KnowledgeBaseFaq/EasBanner'
+import Link from 'next/link'
+import React from 'react'
+import "../../../styles/news.css";
+import { FaChevronRight } from 'react-icons/fa'
 
-async function news() {
-  // const res = await axios.get('https://admin.accurentvc.com/api/blog');
-  // const data =res.json();
-  // return data;
-}
-
-const NewsPage = async () => {
-  const newsData = await news();
-  console.log(newsData);
-
+const TagSingle = () => {
   return (
     <>
+
       {/* ================== Knowledge Base Banner section =================== */}
       <EasBanner title="News & Press Releases" />
       {/*  =========================== News page =================*/}
 
-      <div className="news-page cpy-6">
+          <div className="news-page cpy-6">
         <div className="container">
           <div className="row">
             <div className="col-lg-9 col-md-12">
+                <h3 className='mb-5 text-center tag-title-item'>Tag: <span>Blockchain</span></h3>
               <div className="news-container">
                 {/* {data.length === 0 ? (
               <div
@@ -118,19 +111,14 @@ const NewsPage = async () => {
             <div className="col-lg-3 col-md-12">
               {/* <BlogItem /> */}
               <CategoriesItem />
-
-              <div className="tag_item_list">
-                <h4>tag</h4>
-                <BlogTagsItem />
-              </div>
-
+              <BlogTagsItem />
               <BlogsSubscribe />
             </div>
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default NewsPage;
+export default TagSingle

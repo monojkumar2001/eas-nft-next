@@ -6,11 +6,11 @@ import { convertIpfsAddress } from "../../app/utils";
 const SingleNft = (props) => {
   return (
     <>
-      <div
-        key={props.key}
-        className="images-card w-100 d-flex align-items-center justify-content-between flex-column"
-      >
-        <Link to={`/nft-details/${props.id}`}>
+      <Link to={`/nft-details/${props.id}`}>
+        <div
+          key={props.key}
+          className="images-card w-100 d-flex align-items-center justify-content-between flex-column"
+        >
           <div className="nft-imgs">
             <img src={convertIpfsAddress(props.image)} alt="" />
           </div>
@@ -18,9 +18,15 @@ const SingleNft = (props) => {
             <p>{props.name}</p>
             {/* <span>NO. {props.id}</span> */}
           </div>
-        </Link>
-        <Link to={`/nft-details/${props.id}`} className="buy-nft-btn w-100 custom-btn">Buy NFT</Link>
-      </div>
+
+          <Link
+            to={`/nft-details/${props.id}`}
+            className="buy-nft-btn w-100 custom-btn"
+          >
+            Buy NFT
+          </Link>
+        </div>
+      </Link>
     </>
   );
 };

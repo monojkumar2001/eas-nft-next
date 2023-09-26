@@ -1,0 +1,24 @@
+.faq_question_cons{
+    background: #fff;
+    padding: 20px 10px;
+    border-radius: 6px;
+}
+.faq_question_list_content{
+    display: none;
+}
+.faq_question_list_content.active{
+    display: block;
+}
+
+.faq_question_item_list.active{
+    background: rgba(90,148,255,0.05);
+}
+.faq_question_item_list{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.faq_question_item_list .knowledge-faq-item-header{
+ padding-bottom: 0;
+ border-bottom: none;
+}

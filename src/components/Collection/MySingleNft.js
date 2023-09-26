@@ -72,12 +72,13 @@ const MySingleNft = (props) => {
 
   return (
     <>
+     <Link to={`/nft-details/${props.tokenId}`} key={props.index}>
       <div className="images-card d-flex align-items-center justify-content-center flex-column">
-        <Link to={`/nft-details/${props.tokenId}`} key={props.index}>
-          <div className="nft-img">
+       
+          <div className="nft-imgs">
             <img src={convertIpfsAddress(props.image) || null} alt="" />
           </div>
-        </Link>
+       
         <div className="nft-titles">
           <p> {props.name || null} </p>
           {isListed ? (
@@ -97,6 +98,7 @@ const MySingleNft = (props) => {
           )}
         </div>
       </div>
+      </Link>
     </>
   );
 };

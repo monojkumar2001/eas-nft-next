@@ -1,13 +1,13 @@
+'use client'
 import React from "react";
 import { Link } from "react-router-dom";
 
-const EasNftTypes = ({page}) => {
-  console.log(page)
+const EasNftTypes = ({posts}) => {
   return (
     <div className="knowledge-base-faq-items row cpt-7">
 
     {
-      page.map(res => 
+      posts.map(res => 
     <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
         <div className="knowledge-faq-item-card">
         <div className="knowledge-faq-item-header d-flex align-items-center justify-content-between">
@@ -19,7 +19,7 @@ const EasNftTypes = ({page}) => {
               />
             </span>
             <Link to='' className="faq-title-item">
-              {res.page}
+              {res.posts}
             </Link>
           </div>
           <div className="knowledge-faq-item-right">
@@ -31,7 +31,7 @@ const EasNftTypes = ({page}) => {
             return (
               <div className="knowledge-faq-list-item" key={id}>
                 <span>
-                  {/* <img src={item.fileIcon} alt="" /> */}
+          
                 </span>
                 <Link to={`/docs/${item.slug}`}>{item.question}</Link>
               </div>

@@ -1,40 +1,25 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import "../../styles/knowledgeBase.css";
-import axios from "axios";
-
-import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
-import EasNftTypes from "@/components/KnowledgeBaseFaq/EasNftTypes";
-import Loading from "@/components/Loading/Loading";
-import Image from "next/image";
-import Link from "next/link";
 import BlogItem from "@/components/Blogs/BlogItem";
 import BlogsSubscribe from "@/components/Blogs/BlogsSubscribe";
+import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
+import axios from "axios";
+import "../../styles/knowledgeBase.css";
+import '../../styles/PopularQuestion.css'
+import EasNftTypes from "@/components/KnowledgeBaseFaq/EasNftTypes";
+import Link from "next/link";
+import Image from "next/image";
+import PopularQuestion from "@/components/KnowledgeBaseFaq/PopularQuestion";
+import SocialMediaShareItem from "@/components/SocialMediaLink/SocialMediaShareItem";
+async function docs() {
+  let data = await axios.get("https://admin.accurentvc.com/api/page");
+  return data.data.data;
+}
 
-function KnowledgeBaseFaq() {
-  const [page, setPage] = useState([]);
-  const [loading, setLoading] = useState(true);
+const page = async () => {
+  let posts = await docs();
+  console.log(posts);
 
-  useEffect(() => {
-    axios.get("api/page").then((res) => {
-      setPage(res.data.data);
-      setLoading(false);
-    });
-  }, []);
-
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios.get("api/blog").then((res) => {
-      setData(res.data);
-      setLoading(false);
-    });
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
   return (
-    <>
+    <div>
       {/* ================== Knowledge Base Banner section =================== */}
       <EasBanner title="EAS Knowledge Base" />
       {/* =================== KnowLedge Base Faq =================== */}
@@ -61,24 +46,73 @@ function KnowledgeBaseFaq() {
                 </div>
 
                 <div className="faq_all_question">
-                {page && page.length > 0 ? (
-                        <EasNftTypes page={page} />
-                      ) : (
-                        ""
-                      )}
+                  <div className="knowledge-base-faq-items row cpt-7">
+                    {posts.map((res) => (
+                      <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div className="knowledge-faq-item-card">
+                          <div className="knowledge-faq-item-header d-flex align-items-center justify-content-between">
+                            <div className="knowledge-faq-item-left d-flex align-item-center gap-4">
+                              <span>
+                                <Image
+                                  width={24}
+                                  height={27}
+                                  src="/images/knowledge-base/knowledge-file-icon.svg"
+                                  alt="nft icon"
+                                />
+                              </span>
+                              <h3 className="faq-title-item">{res.page}</h3>
+                            </div>
+                            <div className="knowledge-faq-item-right">
+                              <span>{res.faq.length}</span>
+                            </div>
+                          </div>
+                          <div className="knowledge-faq-list-items mt-4">
+                            {res.faq.map((item, id) => {
+                              return (
+                                <div
+                                  className="knowledge-faq-list-item"
+                                  key={id}
+                                >
+                                  <span>
+                                    {/* <img src={item.fileIcon} alt="" /> */}
+                                  </span>
+                                  <Link href={`/docs/${item.slug}`}>
+                                    {item.question}
+                                  </Link>
+                                </div>
+                              );
+                            })}
+                          </div>
+                          <Link
+                            href={`/docs-category`}
+                            className="knowledge-explore-more-btn"
+                          >
+                            Explore more
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              </div>
+
+              <div className="faq_popular_question">
+                <h2>Frequently Asked Questions</h2>
+                <PopularQuestion />
+              </div>
+              <div className="faq-footer-item-social social-media-popular">
+                <SocialMediaShareItem />
               </div>
             </div>
             <div className="col-lg-3 col-md-12">
-                  <BlogItem />
-<BlogsSubscribe/>
-
-                </div>
+              <BlogItem />
+              <BlogsSubscribe />
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
-export default KnowledgeBaseFaq;
+export default page;
