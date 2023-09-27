@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Router from "next/router";
@@ -126,13 +127,13 @@ function Header() {
                   <div className="dp-menu">
                     <ul className="dp-menu-ul">
                       <li onClick={_toggleSidebar}>
-                        <Link href={"/nft-collection"}>All Minted NFTs</Link>
+                        <Link href={"/all-minted-nfts"}>All Minted NFTs</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link href={"/my-nft-list"}>My NFTs</Link>
+                        <Link href={"/my-nfts"}>My NFTs</Link>
                       </li>
                       <li onClick={_toggleSidebar}>
-                        <Link href={"/marketplace"}> NFTs for Sale</Link>
+                        <Link href={"/nfts-for-sale"}> NFTs for Sale</Link>
                       </li>
                     </ul>
                   </div>

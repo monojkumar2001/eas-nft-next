@@ -3,12 +3,10 @@ import { useState, useEffect, useContext } from "react";
 import "../../styles/myCollection.css";
 import { convertIpfsAddress } from "../../app/utils";
 import axios from "axios";
-import SaleNft from "@/components/Collection/SaleNft";
 import Loading from "@/components/Loading/Loading";
 import Link from "next/link";
-
-import api from "@/api";
-const NftCollection = () => {
+import Image from "next/image";
+const AddressNft = () => {
   const [activeNfts, setActiveNfts] = useState("ALL");
   const [category, setCategory] = useState([]);
 
@@ -25,17 +23,6 @@ const NftCollection = () => {
   const [NFTs, setNFTs] = useState([]);
   const [showNft, setShowNft] = useState([]);
 
-  // const getCategory = async () => {
-  //   try {
-  //     axios.get("api/category").then((res) => {
-  //       setCategory(res.data.data);
-  //       console.log("Category: ", res.data.data);
-  //     });
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
-
   const fetchData = async (status) => {
     console.log("fetch data", status);
     try {
@@ -49,65 +36,54 @@ const NftCollection = () => {
     }
   };
 
-  // useEffect(() => {
-  //   getCategory();
-  // }, []);
-
   useEffect(() => {
     fetchData(activeNfts);
   }, [activeNfts]);
 
   console.log("NFTs", NFTs);
 
-  if (loading) {
-    return <Loading />;
-  }
-
-  // setLoading(false);
-
-  // let updatedData = NFTs;
-  // if (status != "All") {
-  //   console.log("inside :", status);
-  //   updatedData = updatedData.filter((item) => item.Category_id == status);
-  //   setShowNft(updatedData);
-  // } else {
-  //   setShowNft(updatedData);
-  // }
+//   if (loading) {
+//     return <Loading />;
+//   }
 
   return (
     <>
       <div className="my-nfts-wrapper my-collection-page">
         <div className="container">
+            <div className="nft-header-content text-center">
+                <h4 className="sub-title">Available now</h4>
+                <h1 className="section-title nft-header-title nft-address-title">Featured Address NFTs</h1>
+            </div>
           <div className="dashboard-header-item d-flex align-items-center gap-3">
-            {/* <div className="dashboard-con-btn d-flex align-items-center gap-2">
-       <button
-           className={`my-nft-btn ${
-                    activeNfts === "All" ? "active-my-nft-btn" : ""
-                  }`}
-         onClick={() => {
-           toggleNfts("ALL");
-         }}
-       >
-         All
-       </button>
-       {category.map((res) => (
-         <button
-           key={res.id}
-           className="my-nft-btn"
-           onClick={() => {
-             toggleNfts(res.id);
-           }}
-         >
-           {res.name}
-         </button>
-       ))}
-     </div> */}
-            {/* <button
-       className="dashboard-refresh-btn collection-refresh-btn"
-       onClick={refreshPage}
-     >
-       <img src="/images/dashboard/refresh.svg" alt="" />
-     </button> */}
+            <div className="dashboard-con-btn d-flex align-items-center gap-2">
+              <button
+                className={`my-nft-btn ${
+                  activeNfts === "All" ? "active-my-nft-btn" : ""
+                }`}
+                onClick={() => {
+                  toggleNfts("ALL");
+                }}
+              >
+                All
+              </button>
+              {category.map((res) => (
+                <button
+                  key={res.id}
+                  className="my-nft-btn"
+                  onClick={() => {
+                    toggleNfts(res.id);
+                  }}
+                >
+                  {res.name}
+                </button>
+              ))}
+            </div>
+            <button
+              className="dashboard-refresh-btn collection-refresh-btn"
+              onClick={refreshPage}
+            >
+              <img src="/images/dashboard/refresh.svg" alt="" />
+            </button>
           </div>
           <div className="dashboard-card-item-wrapper">
             <div className="dashboard-card-items my-collection-items">
@@ -121,7 +97,12 @@ const NftCollection = () => {
                     >
                       <div className="nft-imgs">
                         {/* <img src={convertIpfsAddress(props.image)} alt="" /> */}
-                        <img src={convertIpfsAddress(nft.ipfs)} alt="" />
+                        <Image
+                          width={500}
+                          height={625}
+                          src={convertIpfsAddress(nft.ipfs)}
+                          alt=""
+                        />
                       </div>
                       <div className="nft-titles">
                         <p>{nft.name}</p>
@@ -149,4 +130,4 @@ const NftCollection = () => {
   );
 };
 
-export default NftCollection;
+export default AddressNft;

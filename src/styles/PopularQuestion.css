@@ -3,8 +3,24 @@
   }
   .faq-row {
     border-bottom: none !important;
-  
-  
+  }
+  .faq-question-content-header h1{
+    color: var(--black-color);
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--secondary-font);
+  }
+  .faq-question-content-header h1{
+    color: var(--black-color);
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--secondary-font);
+  }
+  .faq-question-content-header h2{
+    color: var(--black-color);
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: var(--secondary-font);
   }
    .row-content{
     margin-bottom: 10px;

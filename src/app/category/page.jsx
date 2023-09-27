@@ -1,24 +1,10 @@
-import BlogTagsItem from '@/components/Blogs/BlogTagsItem'
-import BlogsSubscribe from '@/components/Blogs/BlogsSubscribe'
-import CategoriesItem from '@/components/Blogs/CategoriesItem'
-import EasBanner from '@/components/KnowledgeBaseFaq/EasBanner'
-import Link from 'next/link'
-import React from 'react'
-import "../../../styles/news.css";
-import { FaChevronRight } from 'react-icons/fa'
-
-const CategorySingle = () => {
+import React from 'react';
+import Link from 'next/link';
+import { FaChevronRight } from 'react-icons/fa';
+const page = () => {
   return (
     <>
-
-      {/* ================== Knowledge Base Banner section =================== */}
-      {/* <EasBanner title="News & Press Releases" /> */}
-      {/*  =========================== News page =================*/}
-
-          <div className="news-page cpy-6">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-9 col-md-12">
+    <div className="col-lg-9 col-md-12">
             <h3 className='mb-5 text-center tag-title-item'>Category: <span>Blockchain</span></h3>
               <div className="news-container">
                 {/* {data.length === 0 ? (
@@ -108,17 +94,8 @@ const CategorySingle = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-12">
-              {/* <BlogItem /> */}
-              <CategoriesItem />
-              <BlogTagsItem />
-              <BlogsSubscribe />
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   )
 }
 
-export default CategorySingle
+export default page

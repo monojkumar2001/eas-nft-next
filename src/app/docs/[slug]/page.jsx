@@ -13,52 +13,36 @@ import EasQuestionItem from "@/components/KnowledgeBaseFaq/EasQuestionItem";
 import { RiMailUnreadLine } from "react-icons/ri";
 
 
-async function docs(id) {
-
-  try {
-    const response = await axios.get(`https://admin.accurentvc.com/api/page/${id}`);
-    
-    if (response.status === 200) {
-      const singleData = response.data.data;
-      console.log(singleData);
-      return singleData;
-    } else {
-      console.error('Failed to retrieve data. Status:', response.status);
-      return null;
-    }
-  } catch (error) {
-    console.error('An error occurred:', error);
-    throw error; 
+async function docs(slug) {
+try {
+  const response = await axios.get(`https://admin.accurentvc.com/api/page/faq/${slug}`);
+  
+  if (response.status === 200) {
+    const singleData = response.data.data;
+    console.log('data',singleData);
+    return singleData;
+  } else {
+    console.error('Failed to retrieve data. Status:', response.status);
+    // You can provide a more specific error message here
+    throw new Error('Failed to retrieve data. Status: ' + response.status);
   }
+} catch (error) {
+  console.error('An error occurred:', error.message);
+  throw error;
 }
+}
+
+
 //   let data = await axios.get(`https://admin.accurentvc.com/api/page/${id}`);
 //   console.log(data);
 //   return data.data.data;
 // }
 
 const FaqQuestionDetails = async ({ params }) => {
-  // const id = useParams();
   // console.log("id", id);
-  let posts = await docs();
+  let posts = await docs(params.slug);
   console.log(posts);
 
-  // const postsSingle= await singleQuestion(params.id)
-
-  // console.log('ps',postsSingle);
-
-  // const [detail, setDetail] = useState([])
-  // const [loading, setLoading] = useState(true)
-
-  // useEffect(() => {
-  //     axios.get(`api/faq/${id.id}`).then(res => {
-  //       setDetail(res.data.data)
-  //       setLoading(false);
-  //     })
-  // }, [])
-
-  // if(loading){
-  //   return '';
-  // }
 
   return (
     <>

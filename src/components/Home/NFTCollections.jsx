@@ -40,7 +40,7 @@ const NFTCollections = () => {
                 underlying Address NFT within the designated
                 neighborhood postal code, allowing it to pay back
                 its cost without needing to be traded."
-                    link="/address-nfts"
+                    link="/neighborhood-nfts"
                     subText="Learn more"
                   />
                 </div>
@@ -67,7 +67,7 @@ const NFTCollections = () => {
                 When you buy a Charity NFT, 20% of gross initial
                 sale proceeds and a 4% royalty on all trading
                 activity will be donated to charity."
-                    link="/"
+                    link="/charity-nfts"
                     subText="Learn more"
                   />
                 </div>

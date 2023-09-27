@@ -5,12 +5,16 @@ import { FaChevronRight } from "react-icons/fa";
 import "../../styles/addressnft.css";
 import Image from "next/image";
 import AddressHero from "@/components/AddressNFTs/AddressHero";
+import AddressNft from "@/components/AddressNFTs/AddressNft";
 
 const AddressNFTsPage = () => {
   return (
     <>
     
 <AddressHero/>
+{/* ============ Address Nft ============ */}
+<AddressNft />
+
       {/* ========================= WHAT ARE ADDRESS NFTS? ========================= */}
 
       <section className="digital-address-nft cpy-6">

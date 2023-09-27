@@ -1,0 +1,55 @@
+.charity_faq_con{
+    background: #fff;
+    color: var(--black-color);
+}
+.faq_item_answer{
+    display: none;
+    transition:  0.4s;
+}
+
+.faq_item_answer.active{
+    display: block;    
+    transition:ease-in  0.4s ;
+}
+
+.faq_question_title h2{
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    color: var(--black-color);
+}
+.faq_question_title {
+    padding: 15px 20px;
+    border: 1px solid #E3EBF4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.faq_question_title:hover{
+    border: 1px solid #E3EBF4;
+box-shadow: 9px 11px 29px 0px rgba(125, 138, 152, 0.15);
+}
+.faq_question_title span{
+    font-size: 18px;
+    color: var(--main-color);
+}
+.faq_item_box.active .faq_question_title span svg{
+    transform: rotate(180deg);
+}
+.faq_content_item{
+    padding: 20px;
+}
+.faq_content_item h5{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--black-color);
+}
+.faq_content_item h5 span a{
+    color: var(--main-color);
+}
+.faq_content_item .faq_items_list{
+    margin-bottom: 0;
+}
+.faq_content_item .faq_items_list li{
+    font-size: 14px;
+    color: #2C2C2C;
+    padding: 3px 0;
+}

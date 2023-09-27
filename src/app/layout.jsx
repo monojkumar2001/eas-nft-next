@@ -4,7 +4,7 @@ import "./globals.css";
 import { DM_Sans } from "next/font/google";
 import AOS from "aos";
 import axios from "axios";
-import { Web3ReactProvider } from "@web3-react/core";
+// import { Web3ReactProvider } from "@web3-react/core";
 import { ethers } from "ethers";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -14,8 +14,10 @@ import Footer from "@/components/layout/Footer";
 // import GlobalState from "@/context";
 // import { Metadata } from 'next'
  
-
-
+export const metadata = {
+  title: 'monoj',
+  description: 'homin',
+}
 const dm_sans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500"],

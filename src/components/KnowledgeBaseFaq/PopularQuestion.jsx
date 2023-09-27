@@ -29,10 +29,10 @@ const PopularQuestion = () => {
   };
   return (
     <div>
-      <div className="faq-question-content">
+      <div className="faq-question-content mt-4">
         <div className="faq-question-content-header">
-          <span className="focus-color">FREQUENTLY ASKED QUESTIONS</span>
-          <h1 className="section-title-2 mb-5">Most Popular Questions</h1>
+          <h1>FREQUENTLY ASKED QUESTIONS</h1>
+          <h2 className="section-title-2 mb-5">Most Popular Questions</h2>
         </div>
         <div className="faq-conntes">
           <Faq data={data} styles={styles} />

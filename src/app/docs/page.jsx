@@ -97,7 +97,6 @@ const page = async () => {
               </div>
 
               <div className="faq_popular_question">
-                <h2>Frequently Asked Questions</h2>
                 <PopularQuestion />
               </div>
               <div className="faq-footer-item-social social-media-popular">

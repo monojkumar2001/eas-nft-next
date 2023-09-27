@@ -1,3 +1,4 @@
+'use client';
 import React,{useState} from 'react'
 import SocialMediaLinkItem from "../SocialMediaLink/SocialMediaLinkItem";
 import axios from 'axios';

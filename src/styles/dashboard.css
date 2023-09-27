@@ -654,5 +654,7 @@ border: 1px solid #bbbbbb !important;
       .custom-tooltip {
        left: 0px;
       }
-      
+      .input-fulname-fluid-item{
+        flex-direction: column;
+      }
 }

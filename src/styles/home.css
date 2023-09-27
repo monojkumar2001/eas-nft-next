@@ -530,10 +530,7 @@ display: none;
   margin: auto;
 }
 .nft-collections {
-  background-position: -203px 186px;
-  background-repeat: no-repeat;
-  background-size: 1000px auto;
-  padding-bottom: 150px;
+  background-image:none;
 }
 .row-title-text {
   font-size: 18px;
@@ -556,10 +553,7 @@ display: none;
     margin-top: 50px;
 }
 .nft-collections {
-  background-position: -203px 500px;
-  background-repeat: no-repeat;
-  background-size: 800px auto;
-  padding-bottom: 150px;
+  padding-bottom: 70px;
 }
 
 .use-cases-right-item-container {

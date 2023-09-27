@@ -354,3 +354,49 @@ padding: 10px 10px 15px 10px;
     overflow-y: auto;
     background: white;
  }
+
+ .nft-header-content .nft-header-title{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 130px;
+ }
+ .nft-header-content .nft-header-title::before{
+    content: 'EXCLUSIVE DROP';
+    font-size: 100px;
+    font-weight: 600;
+    position: absolute;
+    bottom: -90px;
+    font-family: var(--secondary-font);
+    z-index: -1;
+    color:#ffffff31;
+ }
+ .nft-header-content .charity-nft-title::before{
+    content: 'Charity Nfts';
+ }
+ .nft-header-content .nft-address-title::before{
+    content: 'Nfts Available now';
+ }
+
+ @media screen and (max-width: 992px) {
+    .nft-header-content .nft-header-title::before{
+        font-size: 70px;
+        font-weight: 600;
+        position: absolute;
+        bottom: -90px;
+        font-family: var(--secondary-font);
+        z-index: -1;
+        color:#ffffff31;
+     }
+ }
+ @media screen and (max-width: 768px) {
+    .nft-header-content .nft-header-title::before{
+        font-size: 40px;
+        position: absolute;
+        bottom: -50px;
+     }
+     .nft-header-content .nft-header-title{
+        margin-bottom: 120px;
+     }
+ }

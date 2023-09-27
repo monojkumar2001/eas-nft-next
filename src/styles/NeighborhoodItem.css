@@ -1,0 +1,69 @@
+.neighborhood_invest{
+    background-color: #fff;
+    color: var(--black-color);
+}
+.neighborhood_invest_header{
+
+}
+.neighborhood_invest_header{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.neighborhood_invest_header span{
+    color: var(--main-color);
+    font-family: var(--primary-font);
+    font-size: 18px;
+}
+.neighborhood_invest_header .section-title{
+font-size: 50px;
+color: var(--black-color);
+}
+.neighborhood_invest_wrapper .charity_distribution_item{
+    padding: 30px 20px ;
+    transition: 0.4s;
+    cursor: pointer;
+    height: 100%;
+}
+.neighborhood_invest_wrapper .charity_distribution_item:hover  .icons span{
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+.neighborhood_invest_wrapper .charity_distribution_item .icons span{
+    font-size: 25px;
+    width: 50px;
+box-shadow: 11px 15px 29px 0px rgba(125, 138.00000000000003, 152, 0.25);
+    height: 50px;
+     display:inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: #fff;
+    color: var(--main-color);
+}
+.neighborhood_invest_wrapper .charity_distribution_item:hover{
+    background-color: #fff;
+    box-shadow: 11px 15px 29px 0px rgba(125, 138.00000000000003, 152, 0.15);
+
+}
+
+@media screen and (max-width:992px) {
+    .neighborhood_invest_header {
+        width: 100%;
+    }
+}
+@media screen and (max-width:576px) {
+    .neighborhood_invest_header .section-title {
+        font-size: 35px;
+    }
+    .charity_distribution_item_content h2 {
+        font-size: 20px;
+    }
+}
+
