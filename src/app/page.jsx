@@ -1,5 +1,6 @@
 import "../styles/home.css";
 import Image from "next/image";
+import { openGraphImage } from "./shared-metadata";
 import HeroCardItems from "@/components/Home/HeroCardItems";
 import UseCasesItem from "@/components/Home/UseCasesItem";
 import FaqQuestionItem from "@/components/Home/FaqQuestionItem";
@@ -10,6 +11,11 @@ import InputGoogleMap from "@/components/Home/InputGoogleMap";
 export const metadata = {
   title: "Ethereum Address Service (EAS) | NFT Location Mapping",
   description: "EAS is mapping every real-world address as a tradable NFT, granting ownership of digital rights, and allowing NFT owners to generate revenue.",
+  openGraph: {
+    title: 'Ethereum Address Service (EAS) | NFT Location Mapping',
+    ...openGraphImage,
+    description: 'EAS is mapping every real-world address as a tradable NFT, granting ownership of digital rights, and allowing NFT owners to generate revenue.',
+  },
   icons: {
     icon: ["/images/logo.png"],
   },
