@@ -1,3 +1,4 @@
+'use client'
 import React,{useState} from 'react'
 import { Outlet } from 'react-router-dom'
 import WalletConnet from '../Collection/WalletConnet';

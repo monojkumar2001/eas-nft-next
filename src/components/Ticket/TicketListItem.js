@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 
 const TicketListItem = ({tickets}) => {
   return (
@@ -26,12 +26,12 @@ const TicketListItem = ({tickets}) => {
           </td>
           <td>{item.subject}</td>
           <td>
-            <Link to={`/account/ticket/${item.trxId}`} className="ticket-pending-btn">
+            <Link href={`/account/ticket/${item.trxId}`} className="ticket-pending-btn">
               {item.status}
             </Link>
           </td>
           <td>
-            <Link to={`/account/ticket/${item.trxId}`} className="ticket-view-btn">
+            <Link href={`/account/ticket/${item.trxId}`} className="ticket-view-btn">
               View
             </Link>
           </td>

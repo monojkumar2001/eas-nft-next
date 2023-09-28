@@ -1,6 +1,5 @@
+import Image from 'next/image';
 import React from 'react'
-import { LazyLoadImage } from "react-lazy-load-image-component";
-
 
 const ConnectionModal = ({ isOpen,handleLogin }) => {
     if (!isOpen) return null;
@@ -23,14 +22,14 @@ const ConnectionModal = ({ isOpen,handleLogin }) => {
             <div className="wallet-content-wrapper d-flex flex-column gap-3">
               <button onClick={handleLogin} className="connect-wallet-item d-flex align-items-center flex-column gap-2 justify-content-center">
                 <div className="wallet-img">
-                  <LazyLoadImage src="/images/header/metamask.png" />
+                  <Image width={50} height={50} src="/images/header/metamask.png" />
                 </div>
                 <h4>Metamask</h4>
                 <span>Connect to your Metamask</span>
               </button>
               <button className="connect-wallet-item d-flex align-items-center flex-column gap-2 justify-content-center">
                 <div className="wallet-img">
-                  <LazyLoadImage src="/images/header/coinbase.png" />
+                  <Image width={50} height={50} src="/images/header/coinbase.png" />
                 </div>
                 <h4>Coinbase Wallet</h4>
                 <span>Connect to your Coinbase Wallet</span>

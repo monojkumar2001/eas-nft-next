@@ -1,25 +1,27 @@
-"use client";
-import React,{useState}from "react";
-
 import Link from "next/link";
-import { FaFile,FaRegPlayCircle } from "react-icons/fa";
+import { openGraphImage } from "@/app/shared-metadata";
+import { FaFile} from "react-icons/fa";
 import "../../styles/about.css";
-
 import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
 import Image from "next/image";
 import Video from "@/components/AboutCard/Video";
 import AboutCardItem from "@/components/AboutCard/AboutCardItem";
 import EasPriceItem from "@/components/AboutCard/EasPriceItem";
-const About = () => {
-  // const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const handlePlay = ()=>{
-    setIsPlaying(!isPlaying)
-  }
 
-  const handleLinkClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+export const metadata = {
+  title: "About Ethereum Address Service (EAS) - NFT Address Mapping",
+  description: "EAS is the only platform mapping the world’s addresses as tradable NFTs. Addresses become transactable from their application in Web3 & the metaverse.",
+  openGraph: {
+    title: 'About Ethereum Address Service (EAS) - NFT Address Mapping',
+    ...openGraphImage,
+    description: 'EAS is the only platform mapping the world’s addresses as tradable NFTs. Addresses become transactable from their application in Web3 & the metaverse.',
+  },
+  icons: {
+    icon: ["/images/logo.png"],
+  },
+};
+
+const About = () => {
   return (
     <>
       {/* ============ Banner ========== */}
@@ -43,15 +45,15 @@ const About = () => {
             </p>
 
             <div className="about-video-item mt-4">
-              <button className="custom-btn d-flex gap-2" onClick={handlePlay}>
-                <span className="video-icon-item"><FaRegPlayCircle/></span>
-                <span className="video-view-text">View a Message from Our Founder</span>
-              </button>
+            <Video />
             </div>
-            <Video isPlay={isPlaying} handlePlay={handlePlay}/>
+         
           </div>
-          <div className="row cpt-7" data-aos="fade-up"
-     data-aos-duration="3000">
+          <div
+            className="row cpt-7"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <AboutCardItem />
           </div>
         </div>
@@ -60,8 +62,11 @@ const About = () => {
       {/* =================== EAS Owners Earn ================== */}
       <section className="eas-owners-earn cpb-6">
         <div className="container">
-          <div className="eas-owners-earn-wrapper row " data-aos="fade-up"
-     data-aos-duration="3000">
+          <div
+            className="eas-owners-earn-wrapper row "
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <div className="eas-owners-earn-left col-lg-6 col-md-12">
               <span className="focus-color">HOW WE'RE DIFFERENT</span>
               <h1 className="section-title mb-4">
@@ -80,7 +85,6 @@ const About = () => {
               <div className="explore-btn mt-4">
                 <Link
                   href={"/nft-use-cases"}
-                  onClick={handleLinkClick}
                   className="custom-btn d-flex align-items-center gap-2"
                 >
                   <p>
@@ -91,7 +95,9 @@ const About = () => {
               </div>
             </div>
             <div className="eas-owners-earn-right col-lg-6 col-md-6">
-              <Image width={922} height={594}
+              <Image
+                width={922}
+                height={594}
                 src="/images/about/world-map.png"
                 alt="EAS Price Image"
               />
@@ -102,7 +108,9 @@ const About = () => {
               If you don’t find the answers you’re looking for, please feel free
               to ask us anything!
             </p>
-            <Link href='/contact'  onClick={handleLinkClick} className="custom-btn">Get in Touch</Link>
+            <Link href="/contact" className="custom-btn">
+              Get in Touch
+            </Link>
           </div>
         </div>
       </section>

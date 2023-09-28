@@ -1,8 +1,22 @@
-"use client";
+
 import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
 import "../../styles/nft-pricing.css";
 import NftPricingItem from "@/components/NftPricing/NftPricingItem";
+import { openGraphImage } from "@/app/shared-metadata";
+export const metadata = {
+  title: "EAS NFT Pricing - Ethereum Address Service (EAS)",
+  description: "Address NFTs are priced at 0.05 ETH, and include any address in the world that you claim yourself as an NFT through our claim process.",
+  openGraph: {
+    title: 'EAS NFT Pricing - Ethereum Address Service (EAS)',
+    ...openGraphImage,
+    description: 'Address NFTs are priced at 0.05 ETH, and include any address in the world that you claim yourself as an NFT through our claim process.',
+  },
+  icons: {
+    icon: ["/images/logo.png"],
+  },
+};
 const NftPricingPage = () => {
+  
   return (
     <>
       {/* ============ Banner ========== */}

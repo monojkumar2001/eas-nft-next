@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
+
+import Link from "next/link";
 import "../../styles/NftModelCongratulation.css";
 const NFTModelCongratulations = (props) => {
  
@@ -66,7 +67,7 @@ const NFTModelCongratulations = (props) => {
                     </clipPath>
                   </defs>
                 </svg>
-                <Link to={`https://etherscan.io/tx/${props.hash}`}> <span>View on Etherscan</span></Link>
+                <Link href={`https://etherscan.io/tx/${props.hash}`}> <span>View on Etherscan</span></Link>
                
               </div>
             </div>

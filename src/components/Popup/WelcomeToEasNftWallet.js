@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+'use client';
 import "../../styles/WelcomeEasWallect.css"
 import {useNavigate} from 'next/navigation';
 import Link from 'next/link';

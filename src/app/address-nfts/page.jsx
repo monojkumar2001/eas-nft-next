@@ -1,4 +1,4 @@
-
+import { openGraphImage } from "@/app/shared-metadata";
 import CetagoriesListNFTs from "@/components/AddressNFTs/CetagoriesListNFTs";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
@@ -6,6 +6,19 @@ import "../../styles/addressnft.css";
 import Image from "next/image";
 import AddressHero from "@/components/AddressNFTs/AddressHero";
 import AddressNft from "@/components/AddressNFTs/AddressNft";
+
+export const metadata = {
+  title: "Address NFTs - Bringing Real-World Addresses to Web3 | EAS",
+  description: "Address NFTs are digital address rights that provide NFT buyers & property owners a way to participate in monetization of data associated with an address.",
+  openGraph: {
+    title: 'Address NFTs - Bringing Real-World Addresses to Web3 | EAS',
+    ...openGraphImage,
+    description: 'Address NFTs are digital address rights that provide NFT buyers & property owners a way to participate in monetization of data associated with an address.',
+  },
+  icons: {
+    icon: ["/images/logo.png"],
+  },
+};
 
 const AddressNFTsPage = () => {
   return (

@@ -8,6 +8,7 @@ import EasAffliateItem from "@/components/Home/EasAffliateItem";
 import NFTCollections from "@/components/Home/NFTCollections";
 import AboutUsItem from "@/components/Home/AboutUsItem";
 import InputGoogleMap from "@/components/Home/InputGoogleMap";
+
 export const metadata = {
   title: "Ethereum Address Service (EAS) | NFT Location Mapping",
   description: "EAS is mapping every real-world address as a tradable NFT, granting ownership of digital rights, and allowing NFT owners to generate revenue.",

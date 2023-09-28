@@ -1,7 +1,7 @@
+import Link from "next/link";
 import React from "react";
 import { FaRegUser, FaEthereum } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
 function SignUpInfo() {
   return (
     <>
@@ -69,12 +69,12 @@ function SignUpInfo() {
               <input type="checkbox" />
               <p className="sub-dis">I accept the{" "}
               <span>
-                <Link to={"/"}>Terms of Service</Link>
+                <Link href={"/"}>Terms of Service</Link>
               </span>{" "}
               and
               {" "}
               <span>
-                <Link to={"/"}> Privacy Policy</Link>
+                <Link href={"/"}> Privacy Policy</Link>
               </span></p>
             </div>
             <button className="custom-btn" type="submit">

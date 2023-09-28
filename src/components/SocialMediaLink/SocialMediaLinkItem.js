@@ -6,31 +6,32 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
+import Link from "next/link";
 const SocialMediaLinkItem = () => {
   return (
     <>
       <div className="social-media-link d-flex algin-items-center gap-2 mb-3">
-        <a href="https://twitter.com/eas_nft" target="_blank" rel="noopener noreferrer">
+        <Link href="https://twitter.com/eas_nft" target="_blank" rel="noopener noreferrer">
           <FaTwitter />
-        </a>
-        <a href="https://www.instagram.com/eas_nft/" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link href="https://www.instagram.com/eas_nft/" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
-        </a>
+        </Link>
 
-        <a href="https://www.youtube.com/@easNFT" target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.youtube.com/@easNFT" target="_blank" rel="noopener noreferrer">
           <FaYoutube />
-        </a>
-        <a href="https://www.facebook.com/easNFT/" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link href="https://www.facebook.com/easNFT/" target="_blank" rel="noopener noreferrer">
           <FaFacebookF />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Feasnft%2Fabout%2F"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaLinkedinIn />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Feasnft%2Fabout%2F"
           target="_blank"
           rel="noopener noreferrer"
@@ -47,7 +48,7 @@ const SocialMediaLinkItem = () => {
               fill="white"
             />
           </svg>
-        </a>
+        </Link>
       </div>
     </>
   );

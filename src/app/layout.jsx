@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollTopBtn from '@/components/ScrollToTop/ScrollTopBtn';
 // import GlobalState from "@/context";
 // import { Metadata } from 'next'
  
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
       <body className={dm_sans.className} suppressHydrationWarning={false}>
         {/* <Web3ReactProvider getLibrary={getLibrary}  > */}
         {/* <GlobalState> */}
+        <ScrollTopBtn/>
           <Header />
           {children}
           <Footer />

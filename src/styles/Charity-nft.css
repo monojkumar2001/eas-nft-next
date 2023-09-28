@@ -52,7 +52,13 @@
 }
 .charity_time_count h4{
     font-size: 24px;
-    font-family: var(--secondary-font);
+    font-family: var(--primary-font);
+    text-align: center;
+    line-height: 1.5em;
+}
+.charity_time_count h5{
+    font-size: 24px;
+    font-family: var(--primary-font);
     text-align: center;
     line-height: 1.5em;
 }
@@ -61,6 +67,9 @@
     font-family: var(--secondary-font);
     font-weight: 700;
     color: var(--main-color);
+}
+.time_count_item_text span{
+    
 }
 .time_count_item span{
     font-size: 14px;

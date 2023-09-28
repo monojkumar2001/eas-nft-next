@@ -1,8 +1,24 @@
+'use client';
+import { FaRegPlayCircle } from "react-icons/fa";
+import { useState } from "react";
 import "../../styles/video.css";
-function Video({ isPlay, handlePlay }) {
+function Video() {
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const handlePlay = ()=>{
+    setIsPlaying(!isPlaying)
+  }
   return (
     <>
-      {isPlay && (
+       <button className="custom-btn d-flex gap-2" onClick={handlePlay}>
+                <span className="video-icon-item">
+                  <FaRegPlayCircle />
+                </span>
+                <span className="video-view-text">
+                  View a Message from Our Founder
+                </span>
+              </button>
+      {isPlaying && (
         <div className="new-ticket-model">
           <div className="overlay">
             <button className="close-btn" onClick={handlePlay}>

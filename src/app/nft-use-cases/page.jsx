@@ -1,11 +1,22 @@
 
 import "../../styles/nftUseCases.css";
-
+import { openGraphImage } from "@/app/shared-metadata";
 import Link from "next/link";
 import Image from "next/image";
 import NftUseCaseItem from "@/components/NftUseCase/NftUseCaseItem";
 import RecentNewSlider from "@/components/NftUseCase/RecentNewSlider";
-
+export const metadata = {
+  title: "How Does My NFT Make Money? - EAS NFT Use Cases",
+  description: "Ethereum Address Service (EAS) Address NFTs serve as the master right to receive all royalties associated with a specific real-world address.",
+  openGraph: {
+    title: 'How Does My NFT Make Money? - EAS NFT Use Cases',
+    ...openGraphImage,
+    description: 'Ethereum Address Service (EAS) Address NFTs serve as the master right to receive all royalties associated with a specific real-world address.',
+  },
+  icons: {
+    icon: ["/images/logo.png"],
+  },
+};
 const NFTUseCases = () => {
 
   return (

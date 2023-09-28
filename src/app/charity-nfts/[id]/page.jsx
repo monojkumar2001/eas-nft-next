@@ -26,7 +26,7 @@ import ReactImageMagnify from "react-image-magnify";
 import Link from "next/link";
 
 
-const AddressSingleNFTs = () => {
+const CharitySingleNFTs = () => {
   const { account, library } = useWeb3React();
   const router = useRouter();
   const [waiting, setWaiting] = useState(false);
@@ -502,4 +502,4 @@ const AddressSingleNFTs = () => {
   );
 };
 
-export default AddressSingleNFTs;
+export default CharitySingleNFTs;

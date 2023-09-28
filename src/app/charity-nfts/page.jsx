@@ -1,12 +1,24 @@
 import CharityDistributionItem from "@/components/Carity-nfts/CharityDistributionItem";
 import CharityTimeCount from "@/components/Carity-nfts/CharityTimeCount";
+import { openGraphImage } from "@/app/shared-metadata";
 import Link from "next/link";
 import React from "react";
 import "../../styles/Charity-nft.css";
 import { FaHeart } from "react-icons/fa";
 import CharityNft from "@/components/Carity-nfts/CharityNft";
 import CharityFaq from "@/components/Carity-nfts/CharityFaq";
-
+export const metadata = {
+  title: "Charity NFTs - Donate to Your Favorite Cause with an EAS NFT",
+  description: "For all EAS Charity NFTs, 20% of gross initial sale proceeds and a 4% royalty on all trading activity will be donated to charity.",
+  openGraph: {
+    title: 'Charity NFTs - Donate to Your Favorite Cause with an EAS NFT',
+    ...openGraphImage,
+    description: 'For all EAS Charity NFTs, 20% of gross initial sale proceeds and a 4% royalty on all trading activity will be donated to charity.',
+  },
+  icons: {
+    icon: ["/images/logo.png"],
+  },
+};
 const CharityNfts = () => {
   return (
     <>

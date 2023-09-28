@@ -1,7 +1,7 @@
+'use client';
 import React, { useEffect, useState } from "react";
 import TicketChatBox from "./TicketChatBox";
 import TicketDetailsItem from "./TicketDetailsItem";
-import { ColorRing } from 'react-loader-spinner'
 import axios from "axios";
 import {useParams } from "react-router-dom";
 import Loading2 from "../Loading/Loading2";

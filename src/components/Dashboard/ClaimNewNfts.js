@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from "react";
 import Googlemap from "../../components/Googleaddress/Address";
 import Googlecategory from "../../components/Googleaddress/Category";

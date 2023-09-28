@@ -9,6 +9,21 @@ import Link from "next/link";
 import Image from "next/image";
 import PopularQuestion from "@/components/KnowledgeBaseFaq/PopularQuestion";
 import SocialMediaShareItem from "@/components/SocialMediaLink/SocialMediaShareItem";
+import { openGraphImage } from "@/app/shared-metadata";
+export const metadata = {
+  title: "Knowledge Base - Help & Support | Ethereum Address Service",
+  description: "Welcome to where all the answers are! Search our help documentation for answers to the most frequently asked questions about our NFTs.",
+  openGraph: {
+    title: 'Knowledge Base - Help & Support | Ethereum Address Service',
+    ...openGraphImage,
+    description: 'Welcome to where all the answers are! Search our help documentation for answers to the most frequently asked questions about our NFTs.',
+  },
+  icons: {
+    icon: ["/images/logo.png"],
+  },
+};
+
+
 async function docs() {
   let data = await axios.get("https://admin.accurentvc.com/api/page");
   return data.data.data;

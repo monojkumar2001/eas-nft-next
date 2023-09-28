@@ -1,10 +1,11 @@
-import React from "react";
+'use client';
 import { FaRegUser } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+
 import { useState } from "react";
 import LoginInfo from "./LoginInfo";
 import SignUpInfo from "./SignUpInfo";
+import Link from "next/link";
 const ForgetPassword = () => {
   const [isInfoShow, setInfoShow] = useState(1);
   const handleShow = (index) => {
@@ -16,7 +17,7 @@ const ForgetPassword = () => {
         <div className="container">
           <div className="login-sign-up-wrapper">
             <div className="login-sign-up-header">
-              <Link to={'/login-register'}
+              <Link href={'/login-register'}
                 className={isInfoShow === 1 ? "login-btn active" : "login-btn"}
                 onClick={() => {
                   handleShow(1);
@@ -24,7 +25,7 @@ const ForgetPassword = () => {
               >
                 Login
               </Link>
-              <Link to={'/login-register'}
+              <Link href={'/login-register'}
                 className={isInfoShow === 2 ? "login-btn active" : "login-btn"}
                 onClick={() => {
                   handleShow(2);

@@ -1,3 +1,4 @@
+'use client';
 import React,{useState,useEffect} from "react";
 import { useWeb3React } from "@web3-react/core";
 import { truncateAddress } from "../../wallet/utils2";

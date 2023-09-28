@@ -1,7 +1,8 @@
-import React from "react";
+'use client';
+import Link from "next/link";
 import { FaRegUser } from "react-icons/fa";
 import {RiLockPasswordLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+
 const LoginInfo = () => {
   return (
     <>
@@ -25,7 +26,7 @@ const LoginInfo = () => {
                     <input type="checkbox" />
                     <span>Remember me</span>
                 </div>
-                <Link to="/forget">Forgot Password ?</Link>
+                <Link href="/forget">Forgot Password ?</Link>
             </div>
             <button className="custom-btn" type="submit" >Sign In</button>
           </div>

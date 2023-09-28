@@ -1,7 +1,8 @@
+
 import React from "react";
 import { FaRegUser } from "react-icons/fa";
 import { BsCalendarDate } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 const TicketDetailsItem = () => {
   return (
     <>
@@ -61,7 +62,7 @@ const TicketDetailsItem = () => {
             <h3>
               Have any issues with your order? Visit the{" "}
               <span>
-                <Link to={"/docs"}>Resolution Center</Link>
+                <Link href={"/docs"}>Resolution Center</Link>
               </span>
             </h3>
           </div>

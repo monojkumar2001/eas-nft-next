@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+
 import NFTModelCongratulations from "./NFTModelCongratulations";
 import { convertIpfsAddress } from "../../app/utils";
+import Link from "next/link";
 const SingleNft = (props) => {
   return (
     <>
@@ -20,7 +19,7 @@ const SingleNft = (props) => {
           </div>
 
           <Link
-            to={`/nft-details/${props.id}`}
+            href={`/nft-details/${props.id}`}
             className="buy-nft-btn w-100 custom-btn"
           >
             Buy NFT
