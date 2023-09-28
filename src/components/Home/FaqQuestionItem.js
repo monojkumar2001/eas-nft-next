@@ -1,5 +1,5 @@
-import React from "react";
-import Faq from "react-faq-component";
+'use client';
+import FAQ from 'react-faq-component';
 import { Data } from "../../FaqData/FaqQuestionData";
 import  Link  from "next/link";
 import Image from "next/image";
@@ -24,7 +24,7 @@ const FaqQuestionItem = () => {
                   </h1>
                 </div>
           <div className="faq-conntes">
-          <Faq data={Data} styles={styles} />
+          <FAQ data={Data} styles={styles} />
           </div>
                 <div className="faq-still-question">
                   <p>

@@ -1,5 +1,5 @@
 'use client'
-
+import Script from 'next/script'
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
 import AOS from "aos";
@@ -65,7 +65,9 @@ export default function RootLayout({ children }) {
         {/* </GlobalState> */}
 
         {/* </Web3ReactProvider> */}
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
       </body>
+
     </html>
   );
 }

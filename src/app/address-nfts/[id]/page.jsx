@@ -1,5 +1,6 @@
 'use client';
-import { Link, useParams, useNavigate } from "react-router-dom";
+// import { Link, useParams, useNavigate } from "react-router-dom";
+import { useRouter,useParams  } from "next/navigation";
 import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { ethers } from "ethers";
@@ -21,9 +22,11 @@ import Sale from "@/components/Collection/sale";
 import TransferWallet from "@/components/Collection/TransferWallet";
 import NftTransection from "@/components/Collection/NftTransection";
 import Loading from "@/components/Loading/Loading";
-const NFTDetails = () => {
-//   const { account, library } = useWeb3React();
-  const navigate = useNavigate();
+import ReactImageMagnify from "react-image-magnify";
+import Link from "next/link";
+const AddressSingleDetails = () => {
+  const { account, library } = useWeb3React();
+  const router = useRouter();
   const [waiting, setWaiting] = useState(false);
   const [tarits, setTarits] = useState(true);
   const [nfts, setNfts] = useState({});
@@ -137,7 +140,7 @@ const NFTDetails = () => {
                     `Your NFT transferred successfully to this address: ${transfer}`,
                     "success"
                   );
-                  navigate("/my-nft-list");
+                  router("/my-nft-list");
                 } else {
                   Swal.fire("Oops", "your nft listing Fail", "error");
                 }
@@ -210,7 +213,7 @@ const NFTDetails = () => {
           axios.post("/api/nft/transection", formData).then((res) => {
             if (res.data.status === 200) {
               Swal.fire("Good jobs", "Your NFT  listing in EAS MarketPlace");
-              navigate("/my-nft-list");
+              router("/my-nft-list");
             } else {
               Swal.fire("Oops", "your nft listing Fail", "error");
             }
@@ -341,7 +344,7 @@ const NFTDetails = () => {
 
     fetchData();
   }, [nfts]);
-
+  const imgUri=convertIpfsAddress(nfts.image);
   return (
     <>
       {!loading ? (
@@ -352,7 +355,27 @@ const NFTDetails = () => {
                 <div className="col-lg-6 col-md-12">
                   <div className="nft-details-img-item">
                     <div className="nft-img">
-                      <Image width={500} height={625} alt="nft image" src={convertIpfsAddress(nfts.image)} />
+                    <ReactImageMagnify
+                            {...{
+                                smallImage: {
+                                    alt: 'Wristwatch by Versace',
+                                    isFluidWidth: true,
+                                    src:imgUri,
+                                    sizes: '(max-width: 280px) 100vw, (max-width: 1200px) 30vw, 360px'
+                                },
+                                largeImage: {
+                                    src: imgUri,
+                                    width: 1426,
+                                    height: 2000
+                                },
+                                lensStyle: { backgroundColor: 'rgba(0,0,0,.6)' },
+                                enlargedImageContainerDimensions: {
+                                  width: '130%',
+                                  height: '100%'
+                              }
+                            }}
+                        />
+                      {/* <img width={500} height={625} alt="nft image" src={convertIpfsAddress(nfts.image)} /> */}
                     </div>
                   </div>
                 </div>
@@ -394,7 +417,7 @@ const NFTDetails = () => {
                             </div>
 
                             <div className="nft-traits-item w-100">
-                              <div className="row">
+                              <div className="row g-3">
                                 {attributes.map((nft, i) => {
                                   return (
                                     <div className="col-lg-4 col-md-6 col-sm-12">
@@ -477,4 +500,4 @@ const NFTDetails = () => {
   );
 };
 
-export default NFTDetails;
+export default AddressSingleDetails;

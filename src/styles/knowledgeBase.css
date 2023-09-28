@@ -174,7 +174,7 @@ a.faq-help-btn.d-flex.gap-2 span{
 }
 
 
-.faq_popular_question 
+.faq_popular_question {}
 /* ================================== */
 
 
@@ -197,5 +197,6 @@ a.faq-help-btn.d-flex.gap-2 span{
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
+
 }
 }

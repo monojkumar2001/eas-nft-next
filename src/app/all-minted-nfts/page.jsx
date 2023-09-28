@@ -6,7 +6,6 @@ import axios from "axios";
 import SaleNft from "@/components/Collection/SaleNft";
 import Loading from "@/components/Loading/Loading";
 import Link from "next/link";
-
 import api from "@/api";
 import Image from "next/image";
 const NftCollection = () => {
@@ -26,16 +25,16 @@ const NftCollection = () => {
   const [NFTs, setNFTs] = useState([]);
   const [showNft, setShowNft] = useState([]);
 
-  // const getCategory = async () => {
-  //   try {
-  //     axios.get("api/category").then((res) => {
-  //       setCategory(res.data.data);
-  //       console.log("Category: ", res.data.data);
-  //     });
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
+  const getCategory = async () => {
+    try {
+      axios.get("api/category").then((res) => {
+        setCategory(res.data.data);
+        console.log("Category: ", res.data.data);
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const fetchData = async (status) => {
     console.log("fetch data", status);
@@ -50,9 +49,9 @@ const NftCollection = () => {
     }
   };
 
-  // useEffect(() => {
-  //   getCategory();
-  // }, []);
+  useEffect(() => {
+    getCategory();
+  }, []);
 
   useEffect(() => {
     fetchData(activeNfts);
@@ -118,14 +117,14 @@ const NftCollection = () => {
                     <Link
                       className="images-card d-flex align-items-center justify-content-between flex-column"
                       key={i}
-                      href={`/nft-collection/${nft.tokenId}`}
+                      href={`/nft-details/${nft.tokenId}`}
                     >
                       <div className="nft-imgs">
                         {/* <img src={convertIpfsAddress(props.image)} alt="" /> */}
                         <img alt='nft img' src={convertIpfsAddress(nft.ipfs)} />
                       </div>
                       <div className="nft-titles">
-                        <p>{nft.name}</p>
+                        <p>{nft.address}</p>
                         <button className="buy-nft-btn custom-btn">
                           VIEW NFT DETAILS
                         </button>

@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import PlacesAutocomplete, {
   geocodeByAddress,
@@ -126,7 +127,7 @@ const Address = ({ changeStep, referral }) => {
       ))}
       <div className="claim-my-nft-item">
         <button
-          className="save-change-btn custom-btn"
+          className="save-change-btn custom-btn mt-3"
           onClick={() => {
             changeStep();
             storeLocal();

@@ -94,31 +94,27 @@
 .hero-card .hero-card-items .hero-card-item {
   position: relative;
   cursor: pointer;
-  z-index: -1;
 }
 .hero-card .hero-card-items .hero-card-item:nth-child(1)::before {
   content: "01";
   font-size: 100px;
   font-family: var(--primary-font);
-  -webkit-text-stroke: 3px #003576;
+  -webkit-text-stroke: 1px #0073ff;
   position: absolute;
-  top: -20px;
+  top: -100px;
   right: 50px;
   color: #000;
   transition: 0.4s;
   z-index: -1;
   
 }
-.hero-card .hero-card-items .hero-card-item:hover{
-  z-index: 1;
-}
 .hero-card .hero-card-items .hero-card-item:nth-child(2)::before {
   content: "02";
   font-size: 100px;
   font-family: var(--primary-font);
-  -webkit-text-stroke: 3px #003576;
+  -webkit-text-stroke: 1px #0073ff;
   position: absolute;
-  top: -20px;
+  top: -100px;
   right: 50px;
   transition: 0.4s;
   color: #000;
@@ -128,9 +124,9 @@
   content: "03";
   font-size: 100px;
   font-family: var(--primary-font);
-  -webkit-text-stroke: 3px #003576;
+  -webkit-text-stroke: 1px #0073ff;
   position: absolute;
-  top: -20px;
+  top: -100px;
   transition: 0.4s;
   right: 50px;
   color: #000;
@@ -139,7 +135,6 @@
 .hero-card .hero-card-items .hero-card-item:nth-child(1):hover::before {
   -webkit-text-stroke: 2px #003576;
   color: #0087ff;
-  z-index: 1;
 }
 .hero-card .hero-card-items .hero-card-item:nth-child(2):hover::before {
   -webkit-text-stroke: 2px #003576;
@@ -424,7 +419,7 @@ margin-top: 10px !important;
   font-weight: 700;
 }
 .row-content-text a {
-  color: #0d6efd;
+  color: var(--main-color);
 }
 .styles_faq-row-wrapper__3vA1D
   .styles_row-body__1NvUo
@@ -544,6 +539,9 @@ display: none;
 .styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c{
   z-index: 0;
 }
+.custom-tooltip {
+  left: 0px;
+ }
 }
 @media screen and (max-width: 576px) {
   .hero-wrapper .hero-title {

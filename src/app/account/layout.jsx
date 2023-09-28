@@ -4,6 +4,7 @@ import "../../styles/dashboard.css";
 import "../../styles/ticket.css"
 import Link from "next/link";
 import SidebarDashboard from "@/components/Dashboard/SidebarDashboard";
+import Image from "next/image";
 const layout = ({children}) => {
     const [filterActive, setFilterActive] = useState([false]);
     const toggleFilterMenu = () => {
@@ -27,7 +28,7 @@ const layout = ({children}) => {
                     className="filter-menu-icon"
                     onClick={toggleFilterMenu}
                   >
-                    <img src="/images/dashboard/filter-menu.svg" alt="" />
+                    <Image width={18} height={19}  src="/images/dashboard/filter-menu.svg" alt="icon" />
                   </button>
                 </div>
                 {children}

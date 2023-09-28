@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+'use client';
 
+import React, { useState } from "react";
 const UseCaseCircle = () => {
     const [activeCircleContent, setActiveCircleContent] = useState(1);
     const toggleActiveCircle = (index) => {

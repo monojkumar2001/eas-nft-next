@@ -15,9 +15,9 @@ import { RiMailUnreadLine } from "react-icons/ri";
 
 async function docs(slug) {
 try {
-  const response = await axios.get(`https://admin.accurentvc.com/api/page/faq/${slug}`);
+  const response = await axios.get(`https://admin.accurentvc.com/api/page/${slug}`);
   
-  if (response.status === 200) {
+  if (response.status === 500) {
     const singleData = response.data.data;
     console.log('data',singleData);
     return singleData;

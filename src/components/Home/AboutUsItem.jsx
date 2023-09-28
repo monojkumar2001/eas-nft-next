@@ -40,12 +40,6 @@ const AboutUsItem = () => {
                 >
                   <Image  width={500} height={625} src="/images/home/about-2.png" alt="eas nft img"/>
                 </div>
-                {/* <div
-                  className="about-3-img"
-                 
-                >
-                  <Image width={600} height={500} src="/images/home/about-us-img.svg"  alt='eas nft'/>
-                </div> */}
               </div>
             </div>
           </div>

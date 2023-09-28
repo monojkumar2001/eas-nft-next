@@ -1,3 +1,4 @@
+
 import EasQuestionItem from "@/components/KnowledgeBaseFaq/EasQuestionItem";
 import SocialMediaShareItem from "@/components/SocialMediaLink/SocialMediaShareItem";
 import axios from "axios";
@@ -5,17 +6,23 @@ import Link from "next/link";
 import { BsEmojiSmile } from "react-icons/bs";
 import { FaChevronRight } from "react-icons/fa";
 import { RiMailUnreadLine } from "react-icons/ri";
-import "../../styles/knowledgeBase.css";
+import "../../../styles/knowledgeBase.css";
+import EasBanner from "@/components/KnowledgeBaseFaq/EasBanner";
+import Image from "next/image";
+import FAQItem from "@/components/KnowledgeBaseFaq/FAQItem";
+
 async function docs() {
   let data = await axios.get("https://admin.accurentvc.com/api/page");
   return data.data.data;
 }
 
-const DocsCategory = async () => {
+const DocsCategory = async ({params}) => {
   let posts = await docs();
   console.log(posts);
+
   return (
     <>
+      <EasBanner title={params.id} />
       <div className="faq-question-details-wrapper cpy-6">
         <div className="container">
           <div className="row">
@@ -34,15 +41,46 @@ const DocsCategory = async () => {
                       </span>
                     </Link>
                     <Link href={"/docs"}>
-                    EAS Knowledge Base
+                      EAS Knowledge Base
+                      <span>
+                        <FaChevronRight />
+                      </span>
+                    </Link>
+                    <Link href={params.id}>
+                      {params.id}
                       <span>
                         <FaChevronRight />
                       </span>
                     </Link>
                     {/* <h3 className="faq-title">{detail.question}</h3> */}
                   </div>
-                  {/* <h1>{detail.question}</h1> */}
+                  <h1>{params.id}</h1>
                   {/* <p>{detail.answer}</p> */}
+                  {/* <div>
+                    {posts.map((page) => (
+                      <div key={page.id}>
+                        <h2>{page.page}</h2>
+                        <div className="knowledge-faq-list">
+                          {page.faq.map((item, id) => (
+                            <div className="knowledge-faq-list-item" key={id}>
+                              <span>
+                                <Image
+                                  width={13}
+                                  height={16}
+                                  src="/images/knowledge-base/faq-file-icon.svg"
+                                  alt="file icon"
+                                />
+                              </span>
+                              <Link href={`/docs/${item.slug}`}>
+                                {item.question}
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div> */}
+                  <FAQItem/>
                 </div>
                 <div className="faq-question-details-footer mt-5">
                   <div className="faq-footer-item">
@@ -69,8 +107,8 @@ const DocsCategory = async () => {
                   </div>
                   <div className="faq-help-item-con my-5 d-flex align-items-center justify-content-between">
                     <div className="faq-help-left-item">
-                      <Link href={'/contact'}
-
+                      <Link
+                        href={"/contact"}
                         className="faq-help-btn d-flex gap-2"
                       >
                         <span>

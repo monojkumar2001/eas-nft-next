@@ -6,6 +6,7 @@ import axios from "axios";
 import Loading from "@/components/Loading/Loading";
 import Link from "next/link";
 import Image from "next/image";
+import api from "@/api";
 const AddressNft = () => {
   const [activeNfts, setActiveNfts] = useState("ALL");
   const [category, setCategory] = useState([]);
@@ -42,9 +43,9 @@ const AddressNft = () => {
 
   console.log("NFTs", NFTs);
 
-//   if (loading) {
-//     return <Loading />;
-//   }
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
@@ -93,11 +94,11 @@ const AddressNft = () => {
                     <Link
                       className="images-card d-flex align-items-center justify-content-between flex-column"
                       key={i}
-                      href={`/nft-collection/${nft.tokenId}`}
+                      href={`/address-nfts/${nft.tokenId}`}
                     >
                       <div className="nft-imgs">
                         {/* <img src={convertIpfsAddress(props.image)} alt="" /> */}
-                        <Image
+                        <img
                           width={500}
                           height={625}
                           src={convertIpfsAddress(nft.ipfs)}

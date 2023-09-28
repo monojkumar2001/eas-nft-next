@@ -1,9 +1,11 @@
+'use client'
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ColorRing } from "react-loader-spinner";
 import "../../styles/category.css";
+import '../../styles/email.css'
 import Swal from "sweetalert2";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useRouter } from 'next/navigation'
 
 //  Tipply Popop
 import Tippy from "@tippyjs/react";
@@ -11,7 +13,7 @@ import "tippy.js/dist/tippy.css";
 
 const Category = ({ changeStep }) => {
 
-  const navigate = useNavigate();
+  const navigate = useRouter();
   const [placement, setPlacement] = useState('right'); // Default placement for desktop
 
   // Check if the screen width is less than a certain breakpoint (e.g., 768px for mobile)

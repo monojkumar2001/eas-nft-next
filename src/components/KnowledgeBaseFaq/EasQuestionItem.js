@@ -37,7 +37,7 @@ const EasQuestionItem = ({ posts }) => {
               }}
             >
               <div className="knowledge-faq-item-header d-flex align-items-center justify-content-between">
-                <div className="knowledge-faq-item-left d-flex align-item-center gap-4">
+                <div className="knowledge-faq-item-left d-flex align-item-center gap-3">
                   <span>
                     <Image width={24} height={27}
                       src="/images/knowledge-base/knowledge-file-icon.svg"
@@ -62,7 +62,7 @@ const EasQuestionItem = ({ posts }) => {
               {res.faq.map((item, id) => {
                 return (
                   <div className="knowledge-faq-list-item" key={id}>
-                    <span>{/* <img src={item.fileIcon} alt="" /> */}</span>
+                    <span><Image width={13} height={16}  src='/images/knowledge-base/faq-file-icon.svg' alt="file icon" /></span>
                     <Link href={`/docs/${item.slug}`}>{item.question}</Link>
                   </div>
                 );

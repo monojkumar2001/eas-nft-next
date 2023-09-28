@@ -62,7 +62,7 @@
     font-weight: 500;
   }
   .row-content-text a {
-    color: #0d6efd;
+    color: var(--main-color);
   }
   .styles_faq-row-wrapper__3vA1D
     .styles_row-body__1NvUo

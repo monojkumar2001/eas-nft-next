@@ -51,7 +51,7 @@ const page = async () => {
                       <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                         <div className="knowledge-faq-item-card">
                           <div className="knowledge-faq-item-header d-flex align-items-center justify-content-between">
-                            <div className="knowledge-faq-item-left d-flex align-item-center gap-4">
+                            <div className="knowledge-faq-item-left d-flex align-item-center gap-3">
                               <span>
                                 <Image
                                   width={24}
@@ -74,7 +74,7 @@ const page = async () => {
                                   key={id}
                                 >
                                   <span>
-                                    {/* <img src={item.fileIcon} alt="" /> */}
+                                    <Image width={13} height={16}  src='/images/knowledge-base/faq-file-icon.svg' alt="file icon" />
                                   </span>
                                   <Link href={`/docs/${item.slug}`}>
                                     {item.question}
@@ -84,7 +84,7 @@ const page = async () => {
                             })}
                           </div>
                           <Link
-                            href={`/docs-category`}
+                            href={`/docs-category/${res.path}`}
                             className="knowledge-explore-more-btn"
                           >
                             Explore more
